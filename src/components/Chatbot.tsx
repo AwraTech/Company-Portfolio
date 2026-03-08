@@ -71,14 +71,14 @@ export default function Chatbot() {
     <>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-8 right-4 sm:bottom-8 sm:right-8 z-40 bg-[#00FFAB] hover:bg-[#00FFAB]/90 text-black p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300"
-        style={{ animation: 'pulse 2s infinite' }}
+        className="fixed bottom-8 right-4 sm:bottom-8 sm:right-8 z-50 text-white hover:text-[#00FFAB] hover:scale-125 transition-all duration-300 drop-shadow-2xl animate-bounce"
+        style={{ animationDuration: '2s' }}
       >
-        {isOpen ? <IoClose size={28} /> : <BsChatDotsFill size={28} />}
+        {isOpen ? <IoClose size={50} className="animate-spin" style={{animationDuration: '0.5s', animationIterationCount: '1'}} /> : <BsChatDotsFill size={50} />}
       </button>
 
       {isOpen && (
-        <div className={`fixed bottom-8 right-4 sm:bottom-24 sm:right-8 top-24 sm:top-24 z-40 w-[calc(100vw-2rem)] sm:w-[400px] h-auto sm:h-[calc(100vh-12rem)] max-w-[400px] max-h-[550px] backdrop-blur-lg rounded-2xl shadow-2xl flex flex-col overflow-hidden border ${isDark ? 'bg-[#0A192F]/95 border-white/10' : 'bg-white/95 border-[#00FFAB]/20'}`}>
+        <div className={`fixed bottom-20 right-4 sm:bottom-24 sm:right-8 top-24 sm:top-24 z-40 w-[calc(100vw-2rem)] sm:w-[400px] h-auto sm:h-[calc(100vh-12rem)] max-w-[400px] max-h-[calc(100vh-14rem)] sm:max-h-[550px] backdrop-blur-lg rounded-2xl shadow-2xl flex flex-col overflow-hidden border ${isDark ? 'bg-[#0A192F]/95 border-white/10' : 'bg-white/95 border-[#00FFAB]/20'}`}>
           <div className="bg-gradient-to-r from-[#30504F] to-[#00FFAB]/30 p-3 sm:p-4 flex items-center justify-between">
             <div className="flex items-center gap-2 sm:gap-3">
               <div className="relative">
