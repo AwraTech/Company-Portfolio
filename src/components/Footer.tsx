@@ -41,15 +41,15 @@ export default function Footer() {
               <Image src="/assets/logo.png" alt="Awra Tech" width={50} height={50} className="object-contain" />
               <h3 className="text-2xl font-bold">Awra Tech</h3>
             </div>
-            <p className="text-white/70 text-sm">
+            <p className="text-white/70 text-base">
               A boutique digital agency specializing in high-performance web applications and enterprise cloud infrastructure.
             </p>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold mb-4">SERVICES</h4>
-            <ul className="space-y-2 text-sm text-white/70">
+            <h4 className="font-semibold mb-4 text-base">SERVICES</h4>
+            <ul className="space-y-2 text-base text-white/70">
               <li><a href="#" className="hover:text-[#00FFAB] transition">Application Development</a></li>
               <li><a href="#" className="hover:text-[#00FFAB] transition">Web Development</a></li>
               <li><a href="#" className="hover:text-[#00FFAB] transition">Software Development</a></li>
@@ -59,14 +59,11 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="font-semibold mb-4">COMPANY</h4>
-            <ul className="space-y-2 text-sm text-white/70">
+            <h4 className="font-semibold mb-4 text-base">COMPANY</h4>
+            <ul className="space-y-2 text-base text-white/70">
               <li><a href="#about" className="hover:text-[#00FFAB] transition">About</a></li>
               <li><a href="#services" className="hover:text-[#00FFAB] transition">Services</a></li>
               <li><a href="#projects" className="hover:text-[#00FFAB] transition">Projects</a></li>
-              <li><a href="/contact" className="hover:text-[#00FFAB] transition">Contact</a></li>
-              <li><a href="#teams" className="hover:text-[#00FFAB] transition">Teams</a></li>
-              <li><a href="#testimonials" className="hover:text-[#00FFAB] transition">Testimonials</a></li>
               <li><a href="/news" className="hover:text-[#00FFAB] transition">News</a></li>
             </ul>
           </div>
@@ -74,7 +71,7 @@ export default function Footer() {
 
         {/* Newsletter */}
         <div className="mb-8 flex flex-col items-center text-center">
-          <h4 className="font-semibold mb-4">Stay Updated</h4>
+          <h4 className="font-semibold mb-4 text-base">Stay Updated</h4>
           <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2 w-full max-w-md">
             <input
               type="email"
@@ -94,7 +91,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="pt-8 border-t border-white/10 text-center text-sm text-white/70">
+        <div className="pt-8 border-t border-white/10 text-center text-base text-white/70">
           © 2026 Awra Tech. All rights reserved.
         </div>
       </div>
