@@ -65,7 +65,7 @@ export default function Chatbot() {
     return "That's interesting! I'm Awra AI and I can help you with our services, pricing, team info, or contact details. What would you like to know?";
   };
 
-  if (pathname === '/contact') return null;
+  if (pathname === '/contact' || pathname === '/news') return null;
 
   return (
     <>
