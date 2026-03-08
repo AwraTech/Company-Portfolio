@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Chatbot from "@/components/Chatbot";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,12 +28,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <script dangerouslySetInnerHTML={{
+        __html: `
+          const theme = localStorage.getItem('theme');
+          if (theme === 'dark') {
+            document.documentElement.style.background = '#0A192F';
+            document.body.style.background = '#0A192F';
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.style.background = '#30504F';
+            document.body.style.background = '#30504F';
+            document.documentElement.classList.remove('dark');
+          }
+        `
+      }} />
+      <head>
+      </head>
       <body
         className={`${inter.variable} antialiased font-sans`}
+        suppressHydrationWarning
       >
         <Header />
         {children}
         <Chatbot />
+        <Footer />
       </body>
     </html>
   );
