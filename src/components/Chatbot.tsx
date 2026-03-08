@@ -71,7 +71,7 @@ export default function Chatbot() {
     <>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-8 right-4 sm:bottom-8 sm:right-8 z-50 group transition-all duration-300 drop-shadow-2xl"
+        className="fixed bottom-8 right-4 sm:bottom-8 sm:right-8 z-50 group transition-all duration-300 drop-shadow-2xl cursor-pointer"
       >
         <div className="relative">
           {/* Main button background */}
