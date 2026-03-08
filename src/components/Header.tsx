@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { MdLightMode, MdDarkMode } from 'react-icons/md';
-import Logo from './Logo';
+import Image from 'next/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,7 +29,9 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0">
-            <Logo />
+            <a href="/">
+              <Image src="/assets/logo.png" alt="Awra Tech" width={120} height={120} className="object-contain cursor-pointer" />
+            </a>
           </div>
 
           <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
