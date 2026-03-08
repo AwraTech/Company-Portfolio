@@ -40,7 +40,7 @@ export default function Header() {
           </div>
 
           <div className="hidden md:flex items-center gap-6">
-            <a href="#blog" className="text-[#00FFAB] font-bold text-lg hover:scale-110 transition-transform duration-300">Blog</a>
+            <a href="/news" className="text-[#00FFAB] font-bold text-lg hover:scale-110 transition-transform duration-300">News / Blog</a>
             <button onClick={toggleTheme} className="text-white hover:text-[#00FFAB] p-2 rounded transition">
               {isDark ? <MdLightMode size={24} /> : <MdDarkMode size={24} />}
             </button>
@@ -66,7 +66,7 @@ export default function Header() {
             <a href="#about" className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">About</a>
             <a href="#services" className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Services</a>
             <a href="#team" className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Meet Team</a>
-            <a href="#blog" className="block py-3 px-4 text-[#00FFAB] font-bold text-lg hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2 hover:scale-105">Blog</a>
+            <a href="/news" className="block py-3 px-4 text-[#00FFAB] font-bold text-lg hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2 hover:scale-105">News / Blog</a>
           </div>
         )}
       </nav>
