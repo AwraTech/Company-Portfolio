@@ -71,66 +71,94 @@ export default function Chatbot() {
     <>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-8 right-4 sm:bottom-8 sm:right-8 z-50 text-white hover:text-[#00FFAB] hover:scale-125 transition-all duration-300 drop-shadow-2xl animate-bounce"
-        style={{ animationDuration: '2s' }}
+        className="fixed bottom-8 right-4 sm:bottom-8 sm:right-8 z-50 group transition-all duration-300 drop-shadow-2xl"
       >
-        {isOpen ? <IoClose size={50} className="animate-spin" style={{animationDuration: '0.5s', animationIterationCount: '1'}} /> : <BsChatDotsFill size={50} />}
+        <div className="relative">
+          {/* Main button background */}
+          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white shadow-2xl group-hover:shadow-[#00FFAB]/30 transition-all duration-300 group-hover:scale-110 border-2 border-[#00FFAB]">
+            <div className="w-full h-full rounded-full flex items-center justify-center relative overflow-hidden">
+              {/* Icon */}
+              <div className="relative z-10 transition-all duration-300 group-hover:scale-110">
+                {isOpen ? (
+                  <IoClose size={28} className="text-[#30504F] font-bold animate-spin" style={{animationDuration: '0.3s', animationIterationCount: '1'}} />
+                ) : (
+                  <div className="relative animate-bounce" style={{animationDuration: '2s'}}>
+                    {/* Bold chat bubble icon */}
+                    <svg width="32" height="32" viewBox="0 0 24 24" className="text-[#30504F]">
+                      <path 
+                        fill="currentColor" 
+                        strokeWidth="2"
+                        stroke="currentColor"
+                        d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3.04 1.05 4.35L2 22l5.65-1.05C9.96 21.64 11.46 22 13 22h7c1.1 0 2-.9 2-2V12c0-5.52-4.48-10-10-10z"
+                      />
+                      {/* Bold message dots */}
+                      <circle cx="8" cy="12" r="2" fill="#00FFAB" className="animate-pulse" style={{animationDelay: '0s'}} />
+                      <circle cx="12" cy="12" r="2" fill="#00FFAB" className="animate-pulse" style={{animationDelay: '0.3s'}} />
+                      <circle cx="16" cy="12" r="2" fill="#00FFAB" className="animate-pulse" style={{animationDelay: '0.6s'}} />
+                    </svg>
+                    
+                    {/* Notification dot */}
+                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-[#00FFAB] rounded-full border-2 border-white animate-ping"></div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+          
+          {/* Floating label - shows on hover and touch */}
+          <div className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-[#30504F] text-[#00FFAB] px-4 py-2 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-all duration-300 whitespace-nowrap shadow-xl border-2 border-[#00FFAB] transform scale-95 group-hover:scale-100 group-active:scale-100">
+            💬 Chat with Awra AI
+            <div className="absolute left-full top-1/2 -translate-y-1/2 border-8 border-transparent border-l-[#30504F]"></div>
+          </div>
+        </div>
       </button>
 
       {isOpen && (
         <div className={`fixed bottom-20 right-4 sm:bottom-24 sm:right-8 top-24 sm:top-24 z-40 w-[calc(100vw-2rem)] sm:w-[400px] h-auto sm:h-[calc(100vh-12rem)] max-w-[400px] max-h-[calc(100vh-14rem)] sm:max-h-[550px] backdrop-blur-lg rounded-2xl shadow-2xl flex flex-col overflow-hidden border ${isDark ? 'bg-[#0A192F]/95 border-white/10' : 'bg-white/95 border-[#00FFAB]/20'}`}>
-          <div className="bg-gradient-to-r from-[#30504F] to-[#00FFAB]/30 p-3 sm:p-4 flex items-center justify-between">
-            <div className="flex items-center gap-2 sm:gap-3">
+          <div className="bg-gradient-to-r from-[#30504F] via-[#30504F] to-[#30504F]/90 p-4 flex items-center justify-between border-b border-[#00FFAB]/20">
+            <div className="flex items-center gap-3">
               <div className="relative">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-[#00FFAB] to-[#00FFAB]/70 flex items-center justify-center overflow-hidden shadow-lg">
-                  <svg viewBox="0 0 100 100" className="w-full h-full">
-                    {/* Head */}
-                    <ellipse cx="50" cy="40" rx="22" ry="25" fill="#30504F" className="animate-headBob"/>
-                    
-                    {/* Hair/Top */}
-                    <path d="M 30 30 Q 35 20 40 25 Q 45 18 50 22 Q 55 18 60 25 Q 65 20 70 30" fill="#00FFAB" className="animate-wiggle"/>
-                    
-                    {/* Eyes */}
-                    <ellipse cx="42" cy="38" rx="3" ry="4" fill="white" className="animate-eyeMove"/>
-                    <ellipse cx="58" cy="38" rx="3" ry="4" fill="white" className="animate-eyeMove"/>
-                    <circle cx="42" cy="39" r="1.5" fill="#000" className="animate-pupil"/>
-                    <circle cx="58" cy="39" r="1.5" fill="#000" className="animate-pupil"/>
-                    
-                    {/* Eyebrows */}
-                    <path d="M 38 32 Q 42 30 46 32" stroke="#00FFAB" strokeWidth="1.5" fill="none" strokeLinecap="round" className="animate-eyebrow"/>
-                    <path d="M 54 32 Q 58 30 62 32" stroke="#00FFAB" strokeWidth="1.5" fill="none" strokeLinecap="round" className="animate-eyebrow"/>
-                    
-                    {/* Nose */}
-                    <circle cx="50" cy="45" r="1.5" fill="#00FFAB" className="animate-bounce"/>
-                    
-                    {/* Mouth - Smiling */}
-                    <path d="M 42 50 Q 50 56 58 50" stroke="#00FFAB" strokeWidth="2" fill="none" strokeLinecap="round" className="animate-talk"/>
-                    
-                    {/* Body */}
-                    <ellipse cx="50" cy="75" rx="20" ry="22" fill="#30504F" className="animate-breathe"/>
-                    
-                    {/* Arms */}
-                    <path d="M 32 70 Q 28 75 30 80" stroke="#30504F" strokeWidth="4" strokeLinecap="round" className="animate-wave"/>
-                    <path d="M 68 70 Q 72 75 70 80" stroke="#30504F" strokeWidth="4" strokeLinecap="round" className="animate-wave" style={{animationDelay: '0.3s'}}/>
-                    
-                    {/* Hands */}
-                    <circle cx="30" cy="80" r="3" fill="#00FFAB" className="animate-wave"/>
-                    <circle cx="70" cy="80" r="3" fill="#00FFAB" className="animate-wave" style={{animationDelay: '0.3s'}}/>
-                    
-                    {/* Sparkles */}
-                    <circle cx="20" cy="30" r="1.5" fill="#00FFAB" className="animate-sparkle"/>
-                    <circle cx="80" cy="35" r="1" fill="#00FFAB" className="animate-sparkle" style={{animationDelay: '0.5s'}}/>
-                    <circle cx="25" cy="50" r="1" fill="#00FFAB" className="animate-sparkle" style={{animationDelay: '1s'}}/>
-                  </svg>
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#00FFAB] to-[#00FFAB]/80 p-0.5 shadow-lg">
+                  <div className="w-full h-full rounded-full bg-[#30504F] flex items-center justify-center overflow-hidden">
+                    {/* Professional AI avatar */}
+                    <svg viewBox="0 0 100 100" className="w-full h-full">
+                      {/* Head circle */}
+                      <circle cx="50" cy="35" r="20" fill="#00FFAB" className="animate-pulse"/>
+                      
+                      {/* AI Brain pattern */}
+                      <path d="M 35 30 Q 40 25 45 30 Q 50 25 55 30 Q 60 25 65 30" stroke="#30504F" strokeWidth="2" fill="none" className="animate-pulse"/>
+                      <path d="M 35 35 Q 40 30 45 35 Q 50 30 55 35 Q 60 30 65 35" stroke="#30504F" strokeWidth="2" fill="none" className="animate-pulse" style={{animationDelay: '0.3s'}}/>
+                      <path d="M 35 40 Q 40 35 45 40 Q 50 35 55 40 Q 60 35 65 40" stroke="#30504F" strokeWidth="2" fill="none" className="animate-pulse" style={{animationDelay: '0.6s'}}/>
+                      
+                      {/* Eyes - more tech-like */}
+                      <rect x="42" y="32" width="4" height="6" rx="2" fill="#30504F" className="animate-pulse"/>
+                      <rect x="54" y="32" width="4" height="6" rx="2" fill="#30504F" className="animate-pulse"/>
+                      
+                      {/* Digital mouth */}
+                      <rect x="45" y="42" width="10" height="2" rx="1" fill="#30504F" className="animate-pulse"/>
+                      
+                      {/* Body - more geometric */}
+                      <rect x="35" y="55" width="30" height="35" rx="15" fill="#00FFAB" className="animate-breathe"/>
+                      
+                      {/* Tech elements */}
+                      <circle cx="25" cy="25" r="2" fill="#00FFAB" className="animate-ping" style={{animationDelay: '0s'}}/>
+                      <circle cx="75" cy="30" r="1.5" fill="#00FFAB" className="animate-ping" style={{animationDelay: '0.5s'}}/>
+                      <circle cx="20" cy="45" r="1" fill="#00FFAB" className="animate-ping" style={{animationDelay: '1s'}}/>
+                      <circle cx="80" cy="50" r="1.5" fill="#00FFAB" className="animate-ping" style={{animationDelay: '1.5s'}}/>
+                    </svg>
+                  </div>
                 </div>
-                <span className="absolute bottom-0 right-0 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-green-500 rounded-full border-2 border-white animate-pulse"></span>
+                <span className="absolute bottom-0 right-0 w-3 h-3 bg-[#00FFAB] rounded-full border-2 border-[#30504F] animate-pulse"></span>
               </div>
               <div>
-                <h3 className="text-white font-semibold text-sm sm:text-base">Awra</h3>
-                <p className="text-white/70 text-xs">AI Assistant</p>
+                <h3 className="text-[#00FFAB] font-bold text-base">Awra AI</h3>
+                <p className="text-[#00FFAB]/70 text-xs flex items-center gap-1">
+                  <span className="w-2 h-2 bg-[#00FFAB] rounded-full animate-pulse"></span>
+                  Online Assistant
+                </p>
               </div>
             </div>
-            <button onClick={() => setIsOpen(false)} className="text-white hover:text-[#00FFAB] transition">
+            <button onClick={() => setIsOpen(false)} className="text-[#00FFAB] hover:text-white transition-colors duration-200 p-1 rounded-full hover:bg-[#00FFAB]/10">
               <IoClose size={24} />
             </button>
           </div>
