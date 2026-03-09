@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import { IoSend, IoClose } from 'react-icons/io5';
 import { BsChatDotsFill } from 'react-icons/bs';
 import { usePathname } from 'next/navigation';
+import { useTheme } from '@/context/ThemeContext';
 
 interface Message {
   text: string;
@@ -13,23 +14,14 @@ interface Message {
 
 export default function Chatbot() {
   const pathname = usePathname();
+  const { isDark } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     { text: "Hi! I'm Awra AI, your intelligent assistant. How can I help you today?", isBot: true, timestamp: new Date() }
   ]);
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
-  const [isDark, setIsDark] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const checkDarkMode = () => {
-      setIsDark(document.body.style.background === 'rgb(10, 25, 47)');
-    };
-    checkDarkMode();
-    const interval = setInterval(checkDarkMode, 100);
-    return () => clearInterval(interval);
-  }, []);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
