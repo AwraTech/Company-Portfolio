@@ -1,27 +1,16 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { MdLightMode, MdDarkMode } from 'react-icons/md';
 import Image from 'next/image';
+import { useTheme } from '@/context/ThemeContext';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    const isDarkMode = savedTheme === 'dark';
-    setIsDark(isDarkMode);
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = !isDark;
-    setIsDark(newTheme);
-    localStorage.setItem('theme', newTheme ? 'dark' : 'light');
-  };
+  const { isDark, toggle } = useTheme();
 
   return (
-    <header className={`fixed top-0 w-full z-50 backdrop-blur-md border-b border-white/10 ${isDark ? 'bg-[#0A192F]/80' : 'bg-[#30504F]/80'}`}>
+    <header className="fixed top-0 w-full z-50 backdrop-blur-md border-b border-white/10 bg-[#30504F]/80">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0">
@@ -38,14 +27,14 @@ export default function Header() {
           </div>
 
           <div className="hidden md:flex items-center gap-6">
-            <a href="/news" className="text-[#00FFAB] font-bold text-lg hover:scale-110 transition-transform duration-300">News / Blog</a>
-            <button onClick={toggleTheme} className="text-white hover:text-[#00FFAB] p-2 rounded transition cursor-pointer">
+            <button onClick={toggle} className="text-white hover:text-[#00FFAB] transition-all p-2 hover:scale-110 cursor-pointer">
               {isDark ? <MdLightMode size={24} /> : <MdDarkMode size={24} />}
             </button>
+            <a href="/news" className="text-[#00FFAB] font-bold text-lg hover:scale-110 transition-transform duration-300">News / Blog</a>
           </div>
 
           <div className="md:hidden flex items-center gap-4">
-            <button onClick={toggleTheme} className="text-white hover:text-[#00FFAB] p-2 rounded transition cursor-pointer">
+            <button onClick={toggle} className="text-white hover:text-[#00FFAB] transition-all p-2 cursor-pointer">
               {isDark ? <MdLightMode size={24} /> : <MdDarkMode size={24} />}
             </button>
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="relative w-10 h-10 flex items-center justify-center group">

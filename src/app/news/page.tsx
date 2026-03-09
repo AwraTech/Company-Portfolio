@@ -15,17 +15,7 @@ interface NewsPost {
 }
 
 export default function NewsPage() {
-  const [isDark, setIsDark] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    const checkDarkMode = () => {
-      setIsDark(document.body.style.background === 'rgb(10, 25, 47)');
-    };
-    checkDarkMode();
-    const interval = setInterval(checkDarkMode, 100);
-    return () => clearInterval(interval);
-  }, []);
 
   const featuredPosts: NewsPost[] = [
     {
@@ -193,7 +183,7 @@ export default function NewsPage() {
           {newsPosts.map((post) => (
             <div
               key={post.id}
-              className={`rounded-xl overflow-hidden group cursor-pointer transition-all hover:scale-[1.02] hover:shadow-2xl ${isDark ? 'bg-white/5' : 'bg-white/10'} backdrop-blur-sm border ${isDark ? 'border-white/10' : 'border-white/20'}`}
+              className="rounded-xl overflow-hidden group cursor-pointer transition-all hover:scale-[1.02] hover:shadow-2xl bg-white/10 backdrop-blur-sm border border-white/20"
             >
               <div className="relative h-52 overflow-hidden">
                 <Image

@@ -1,18 +1,11 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
   const [showSuccess, setShowSuccess] = useState(false);
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    const checkDarkMode = savedTheme === 'dark';
-    setIsDark(checkDarkMode);
-  }, []);
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,7 +15,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className={`text-white py-12 pb-24 sm:pb-12 border-t border-white/10 ${isDark ? 'bg-[#0A192F]' : 'bg-[#30504F]'}`}>
+    <footer className="text-white py-12 pb-24 sm:pb-12 border-t border-white/10 bg-[#30504F]">
       {/* Success Alert */}
       {showSuccess && (
         <div className="fixed top-24 right-4 z-50 bg-[#00FFAB] text-black px-6 py-4 rounded-lg shadow-2xl animate-slideDown flex items-center gap-3">

@@ -5,13 +5,21 @@
 }
 
 html {
-  background: #30504F;
+  background: #30504F !important;
+}
+
+html.dark {
+  background: #0f172a !important;
 }
 
 body {
   font-family: var(--font-inter);
-  transition: none;
-  background: #30504F;
+  transition: background-color 0.3s ease;
+  background: #30504F !important;
+}
+
+body.dark {
+  background: #0f172a !important;
 }
 
 @keyframes slideDown {
