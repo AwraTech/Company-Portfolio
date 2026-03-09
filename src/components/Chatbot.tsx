@@ -67,16 +67,16 @@ export default function Chatbot() {
       >
         <div className="relative">
           {/* Main button background */}
-          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white shadow-2xl group-hover:shadow-[#00FFAB]/30 transition-all duration-300 group-hover:scale-110 border-2 border-[#00FFAB]">
+          <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full shadow-2xl group-hover:shadow-[#00FFAB]/30 transition-all duration-300 group-hover:scale-110 border-2 border-[#00FFAB] ${isDark ? 'bg-[#0f172a]' : 'bg-[#30504F]'}`}>
             <div className="w-full h-full rounded-full flex items-center justify-center relative overflow-hidden">
               {/* Icon */}
               <div className="relative z-10 transition-all duration-300 group-hover:scale-110">
                 {isOpen ? (
-                  <IoClose size={28} className="text-[#30504F] font-bold animate-spin" style={{animationDuration: '0.3s', animationIterationCount: '1'}} />
+                  <IoClose size={28} className={`font-bold animate-spin ${isDark ? 'text-white' : 'text-white'}`} style={{animationDuration: '0.3s', animationIterationCount: '1'}} />
                 ) : (
                   <div className="relative animate-bounce" style={{animationDuration: '2s'}}>
                     {/* Bold chat bubble icon */}
-                    <svg width="32" height="32" viewBox="0 0 24 24" className="text-[#30504F]">
+                    <svg width="32" height="32" viewBox="0 0 24 24" className={isDark ? 'text-white' : 'text-white'}>
                       <path 
                         fill="currentColor" 
                         strokeWidth="2"
@@ -90,7 +90,7 @@ export default function Chatbot() {
                     </svg>
                     
                     {/* Notification dot */}
-                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-[#00FFAB] rounded-full border-2 border-white animate-ping"></div>
+                    <div className={`absolute -top-1 -right-1 w-4 h-4 bg-[#00FFAB] rounded-full animate-ping ${isDark ? 'border-2 border-[#0f172a]' : 'border-2 border-white'}`}></div>
                   </div>
                 )}
               </div>
@@ -98,9 +98,9 @@ export default function Chatbot() {
           </div>
           
           {/* Floating label - shows on hover and touch */}
-          <div className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-[#30504F] text-[#00FFAB] px-4 py-2 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-all duration-300 whitespace-nowrap shadow-xl border-2 border-[#00FFAB] transform scale-95 group-hover:scale-100 group-active:scale-100">
+          <div className={`absolute right-full mr-3 top-1/2 -translate-y-1/2 px-4 py-2 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-all duration-300 whitespace-nowrap shadow-xl border-2 border-[#00FFAB] transform scale-95 group-hover:scale-100 group-active:scale-100 ${isDark ? 'bg-[#0f172a] text-[#00FFAB]' : 'bg-[#30504F] text-[#00FFAB]'}`}>
             💬 Chat with Awra AI
-            <div className="absolute left-full top-1/2 -translate-y-1/2 border-8 border-transparent border-l-[#30504F]"></div>
+            <div className={`absolute left-full top-1/2 -translate-y-1/2 border-8 border-transparent ${isDark ? 'border-l-[#0f172a]' : 'border-l-[#30504F]'}`}></div>
           </div>
         </div>
       </button>
