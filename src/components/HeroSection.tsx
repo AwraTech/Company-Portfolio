@@ -1,3 +1,5 @@
+"use client";
+
 import heroBg from "../assets/hero-bg.jpg";
 
 const HeroSection = () => {
