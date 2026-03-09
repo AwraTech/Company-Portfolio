@@ -1,3 +1,6 @@
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+
 import Image from "next/image";
 import { FaLinkedin, FaGithub, FaBriefcase } from "react-icons/fa";
 import Services from "@/components/services/Services";
@@ -58,6 +61,8 @@ const teamMembers = [
 export default function Home() {
 	return (
 		<main className="pt-20 min-h-screen">
+			<HeroSection />
+      		<AboutSection />
 			<section id="team" className="py-20 px-6">
 				<div className="max-w-7xl mx-auto">
 					<div className="text-center mb-16">

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "tailwindcss/utilities";
 
 :root {
 	--background: #30504f;
@@ -9,7 +10,7 @@
 	--card-bg: #3a5a59;
 	--section-bg: #30504f;
 	--border-color: #426363;
-	--font-inter: "Inter", system-ui, -apple-system, sans-serif; /* Add this line */
+	--font-inter: "Inter", system-ui, -apple-system, sans-serif;
 }
 
 @theme inline {
@@ -244,4 +245,48 @@ body.dark {
 .animate-wiggle {
 	animation: wiggle 1.8s ease-in-out infinite;
 	transform-origin: center;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: hsl(var(--primary));
+}
+.section-title {
+  font-weight: 700;
+  line-height: 1.1;
+  color: hsl(var(--foreground));
 }
