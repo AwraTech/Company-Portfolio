@@ -6,7 +6,7 @@ import ProjectCard from './ProjectCard';
 
 export default function Projects() {
   return (
-    <section className="py-16 px-4 bg-background dark:bg-background">
+    <section className="py-16 px-4 section-primary">
       <div className="max-w-7xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

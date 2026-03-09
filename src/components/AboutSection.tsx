@@ -49,7 +49,7 @@ const fadeUp = {
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 md:py-32 bg-gradient-to-r from-emerald-900/80 via-emerald-800/50 to-transparent -mt-1">
+    <section id="about" className="py-24 md:py-32 section-alternate -mt-1">
       <div className="container mx-auto px-4 md:px-8">
 
         {/* WHY AWRA SECTION */}

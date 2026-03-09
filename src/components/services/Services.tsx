@@ -6,7 +6,7 @@ import ServiceCard from './ServiceCard';
 
 export default function Services() {
   return (
-    <section className="py-16 px-4 bg-section-bg dark:bg-section-bg">
+    <section className="py-16 px-4 section-alternate">
       <div className="max-w-7xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
