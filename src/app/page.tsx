@@ -63,7 +63,9 @@ export default function Home() {
 		<main className="pt-20 min-h-screen">
 			<HeroSection />
       		<AboutSection />
-			<section id="team" className="py-20 px-6">
+			<Services />
+			<Projects />
+			<section id="team" className="py-20 px-6 section-primary">
 				<div className="max-w-7xl mx-auto">
 					<div className="text-center mb-16">
 						<p className="text-[#00FFAB] text-sm font-medium mb-2">
@@ -125,8 +127,6 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<Services />
-			<Projects />
 			<Testimonials />
 		</main>
 	);

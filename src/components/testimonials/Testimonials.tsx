@@ -80,8 +80,9 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-16 px-4 bg-section-bg dark:bg-section-bg">
+    <section className="py-16 px-4 section-alternate">
       <div className="max-w-7xl mx-auto">
+        <p className="text-primary text-sm font-medium mb-2 text-center">05. TESTIMONIALS</p>
         <h2 className="text-4xl font-bold text-center mb-4 text-foreground">What Our Clients Say</h2>
         <p className="text-secondary text-center mb-12 max-w-2xl mx-auto">
           Don't just take our word for it - hear from our satisfied clients
@@ -89,7 +90,7 @@ export default function Testimonials() {
         <div className="relative px-12">
           <button
             onClick={handlePrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-card-bg dark:bg-card-bg rounded-full p-2 shadow-lg hover:bg-section-bg dark:hover:bg-section-bg transition-colors"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-card-bg rounded-full p-2 shadow-lg hover:bg-section-bg transition-colors"
             aria-label="Previous testimonials"
           >
             <ChevronLeft className="w-6 h-6 text-foreground" />
@@ -114,7 +115,7 @@ export default function Testimonials() {
           </div>
           <button
             onClick={handleNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-card-bg dark:bg-card-bg rounded-full p-2 shadow-lg hover:bg-section-bg dark:hover:bg-section-bg transition-colors"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-card-bg rounded-full p-2 shadow-lg hover:bg-section-bg transition-colors"
             aria-label="Next testimonials"
           >
             <ChevronRight className="w-6 h-6 text-foreground" />

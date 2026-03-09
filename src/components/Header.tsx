@@ -10,7 +10,7 @@ export default function Header() {
   const { isDark, toggle } = useTheme();
 
   return (
-    <header className={`fixed top-0 w-full z-50 backdrop-blur-md border-b border-white/10 ${isDark ? 'bg-[#0f172a]/80' : 'bg-[#30504F]/80'}`}>
+    <header className="fixed top-0 w-full z-50 backdrop-blur-md border-b border-white/10 bg-background/80">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0">

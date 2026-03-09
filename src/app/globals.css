@@ -39,10 +39,12 @@
 	}
 }
 
-body {
+html, body {
 	background: var(--background);
 	color: var(--foreground);
-	font-family: "Inter", sans-serif;
+	font-family: var(--font-inter);
+	transition: background-color 0.3s ease;
+	min-height: 100vh;
 }
 
 * {
@@ -53,24 +55,6 @@ body {
 	* {
 		scroll-behavior: smooth;
 	}
-}
-
-html {
-	background: #30504f !important;
-}
-
-html.dark {
-	background: #0f172a !important;
-}
-
-body {
-	font-family: var(--font-inter);
-	transition: background-color 0.3s ease;
-	background: #30504f !important;
-}
-
-body.dark {
-	background: #0f172a !important;
 }
 
 @keyframes slideDown {
@@ -283,10 +267,19 @@ body.dark {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: hsl(var(--primary));
+  color: var(--primary);
 }
+
 .section-title {
   font-weight: 700;
   line-height: 1.1;
-  color: hsl(var(--foreground));
+  color: var(--foreground);
+}
+
+.section-primary {
+  background: var(--background);
+}
+
+.section-alternate {
+  background: var(--section-bg);
 }
