@@ -23,7 +23,7 @@ export default function Header() {
             <a href="/" className="text-white hover:text-[#00FFAB] transition">Home</a>
             <a href="#about" className="text-white hover:text-[#00FFAB] transition">About</a>
             <a href="#services" className="text-white hover:text-[#00FFAB] transition">Services</a>
-            <a href="#team" className="text-white hover:text-[#00FFAB] transition">Meet Team</a>
+            <a href="/#team" className="text-white hover:text-[#00FFAB] transition">Meet Team</a>
           </div>
 
           <div className="hidden md:flex items-center gap-6">
@@ -52,7 +52,7 @@ export default function Header() {
             <a href="/" className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Home</a>
             <a href="#about" className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">About</a>
             <a href="#services" className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Services</a>
-            <a href="#team" className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Meet Team</a>
+            <a href="/#team" className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Meet Team</a>
             <a href="/news" className="block py-3 px-4 text-[#00FFAB] font-bold text-lg hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2 hover:scale-105">News / Blog</a>
           </div>
         )}
