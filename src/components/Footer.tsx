@@ -2,8 +2,10 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { useTheme } from '@/context/ThemeContext';
 
 export default function Footer() {
+  const { isDark } = useTheme();
   const [email, setEmail] = useState('');
   const [showSuccess, setShowSuccess] = useState(false);
 
@@ -15,7 +17,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="text-white py-12 pb-24 sm:pb-12 border-t border-white/10 bg-[#30504F]">
+    <footer className={`text-white py-12 pb-24 sm:pb-12 border-t border-white/10 ${isDark ? 'bg-[#0f172a]' : 'bg-[#30504F]'}`}>
       {/* Success Alert */}
       {showSuccess && (
         <div className="fixed top-24 right-4 z-50 bg-[#00FFAB] text-black px-6 py-4 rounded-lg shadow-2xl animate-slideDown flex items-center gap-3">
