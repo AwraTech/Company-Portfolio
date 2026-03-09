@@ -82,6 +82,7 @@ export default function Testimonials() {
   return (
     <section className="py-16 px-4 section-alternate">
       <div className="max-w-7xl mx-auto">
+        <p className="text-primary text-sm font-medium mb-2 text-center">05. TESTIMONIALS</p>
         <h2 className="text-4xl font-bold text-center mb-4 text-foreground">What Our Clients Say</h2>
         <p className="text-secondary text-center mb-12 max-w-2xl mx-auto">
           Don't just take our word for it - hear from our satisfied clients

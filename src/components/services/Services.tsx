@@ -8,6 +8,7 @@ export default function Services() {
   return (
     <section className="py-16 px-4 section-alternate">
       <div className="max-w-7xl mx-auto">
+        <p className="text-primary text-sm font-medium mb-2 text-center">02. SERVICES</p>
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

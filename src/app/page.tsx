@@ -62,7 +62,7 @@ export default function Home() {
 	return (
 		<main className="pt-20 min-h-screen">
 			<HeroSection />
-      			<AboutSection />
+      		<AboutSection />
 			<Services />
 			<Projects />
 			<section id="team" className="py-20 px-6 section-primary">
