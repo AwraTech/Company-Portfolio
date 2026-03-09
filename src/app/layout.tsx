@@ -13,9 +13,6 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Awra Tech | Technologies & Innovation",
   description: "Company Portfolio Website",
-  icons: {
-    icon: '/assets/logo.png',
-  },
 };
 
 export default function RootLayout({

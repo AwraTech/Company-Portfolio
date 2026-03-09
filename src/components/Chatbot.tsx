@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { IoSend, IoClose } from 'react-icons/io5';
 import { BsChatDotsFill } from 'react-icons/bs';
+import { usePathname } from 'next/navigation';
 
 interface Message {
   text: string;
@@ -11,13 +12,24 @@ interface Message {
 }
 
 export default function Chatbot() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     { text: "Hi! I'm Awra AI, your intelligent assistant. How can I help you today?", isBot: true, timestamp: new Date() }
   ]);
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const [isDark, setIsDark] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const checkDarkMode = () => {
+      setIsDark(document.body.style.background === 'rgb(10, 25, 47)');
+    };
+    checkDarkMode();
+    const interval = setInterval(checkDarkMode, 100);
+    return () => clearInterval(interval);
+  }, []);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -53,6 +65,8 @@ export default function Chatbot() {
     return "That's interesting! I'm Awra AI and I can help you with our services, pricing, team info, or contact details. What would you like to know?";
   };
 
+  if (pathname === '/contact') return null;
+
   return (
     <>
       <button
@@ -64,7 +78,7 @@ export default function Chatbot() {
       </button>
 
       {isOpen && (
-        <div className="fixed bottom-8 right-4 sm:bottom-24 sm:right-8 top-24 sm:top-24 z-40 w-[calc(100vw-2rem)] sm:w-[400px] h-auto sm:h-[calc(100vh-12rem)] max-w-[400px] max-h-[550px] bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-[#00FFAB]/20">
+        <div className={`fixed bottom-8 right-4 sm:bottom-24 sm:right-8 top-24 sm:top-24 z-40 w-[calc(100vw-2rem)] sm:w-[400px] h-auto sm:h-[calc(100vh-12rem)] max-w-[400px] max-h-[550px] backdrop-blur-lg rounded-2xl shadow-2xl flex flex-col overflow-hidden border ${isDark ? 'bg-[#0A192F]/95 border-white/10' : 'bg-white/95 border-[#00FFAB]/20'}`}>
           <div className="bg-gradient-to-r from-[#30504F] to-[#00FFAB]/30 p-3 sm:p-4 flex items-center justify-between">
             <div className="flex items-center gap-2 sm:gap-3">
               <div className="relative">
@@ -121,10 +135,10 @@ export default function Chatbot() {
             </button>
           </div>
 
-          <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 bg-gradient-to-b from-white/50 to-white/80">
+          <div className={`flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 ${isDark ? 'bg-[#0A192F]' : 'bg-gradient-to-b from-white/50 to-white/80'}`}>
             {messages.map((msg, idx) => (
               <div key={idx} className={`flex ${msg.isBot ? 'justify-start' : 'justify-end'} animate-slideDown`}>
-                <div className={`max-w-[85%] sm:max-w-[75%] p-2.5 sm:p-3 rounded-2xl ${msg.isBot ? 'bg-gray-100 text-gray-800' : 'bg-[#00FFAB] text-black'} shadow-md`}>
+                <div className={`max-w-[85%] sm:max-w-[75%] p-2.5 sm:p-3 rounded-2xl shadow-md ${msg.isBot ? (isDark ? 'bg-white/10 text-white' : 'bg-gray-100 text-gray-800') : 'bg-[#00FFAB] text-black'}`}>
                   <p className="text-xs sm:text-sm">{msg.text}</p>
                   <span className="text-[10px] sm:text-xs opacity-60 mt-1 block">{msg.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
                 </div>
@@ -132,11 +146,11 @@ export default function Chatbot() {
             ))}
             {isTyping && (
               <div className="flex justify-start">
-                <div className="bg-gray-100 p-3 rounded-2xl shadow-md">
+                <div className={`p-3 rounded-2xl shadow-md ${isDark ? 'bg-white/10' : 'bg-gray-100'}`}>
                   <div className="flex gap-1">
-                    <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></span>
-                    <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></span>
-                    <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></span>
+                    <span className={`w-2 h-2 rounded-full animate-bounce ${isDark ? 'bg-white' : 'bg-gray-400'}`} style={{ animationDelay: '0ms' }}></span>
+                    <span className={`w-2 h-2 rounded-full animate-bounce ${isDark ? 'bg-white' : 'bg-gray-400'}`} style={{ animationDelay: '150ms' }}></span>
+                    <span className={`w-2 h-2 rounded-full animate-bounce ${isDark ? 'bg-white' : 'bg-gray-400'}`} style={{ animationDelay: '300ms' }}></span>
                   </div>
                 </div>
               </div>
@@ -144,7 +158,7 @@ export default function Chatbot() {
             <div ref={messagesEndRef} />
           </div>
 
-          <div className="p-3 sm:p-4 bg-white border-t border-gray-200">
+          <div className={`p-3 sm:p-4 border-t ${isDark ? 'bg-[#0A192F] border-white/10' : 'bg-white border-gray-200'}`}>
             <div className="flex gap-2">
               <input
                 type="text"
@@ -152,7 +166,7 @@ export default function Chatbot() {
                 onChange={(e) => setInput(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSend()}
                 placeholder="Type your message..."
-                className="flex-1 px-3 sm:px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:border-[#00FFAB] text-black text-sm"
+                className={`flex-1 px-3 sm:px-4 py-2 border rounded-full focus:outline-none focus:border-[#00FFAB] transition text-sm ${isDark ? 'bg-white/10 border-white/20 text-white placeholder-white/50' : 'bg-white border-gray-300 text-black placeholder-gray-400'}`}
               />
               <button
                 onClick={handleSend}
