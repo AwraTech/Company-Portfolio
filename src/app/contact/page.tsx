@@ -1,10 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaYoutube, FaTiktok, FaTelegram, FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import Image from 'next/image';
+import { useTheme } from '@/context/ThemeContext';
 
 export default function ContactPage() {
+  const { isDark } = useTheme();
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -12,16 +14,6 @@ export default function ContactPage() {
     message: ''
   });
   const [showSuccess, setShowSuccess] = useState(false);
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    const checkDarkMode = () => {
-      setIsDark(document.body.style.background === 'rgb(10, 25, 47)');
-    };
-    checkDarkMode();
-    const interval = setInterval(checkDarkMode, 100);
-    return () => clearInterval(interval);
-  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -56,7 +48,7 @@ export default function ContactPage() {
           className="object-cover"
           priority
         />
-        <div className={`absolute inset-0 bg-gradient-to-b from-black/20 ${isDark ? 'via-[#0A192F]/60 to-[#0A192F]' : 'via-[#30504F]/60 to-[#30504F]'}`}></div>
+        <div className={`absolute inset-0 bg-gradient-to-b ${isDark ? 'from-black/20 via-[#0f172a]/90 to-[#0f172a]' : 'from-black/20 via-[#30504F]/90 to-[#30504F]'}`}></div>
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-3">Contact Our Team</h1>
           <p className="text-sm sm:text-base text-white/90 max-w-xl">Get in touch with us and let's discuss how we can help bring your ideas to life.</p>

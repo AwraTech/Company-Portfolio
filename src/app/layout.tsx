@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Chatbot from "@/components/Chatbot";
+import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/context/ThemeContext";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,12 +29,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+      </head>
       <body
         className={`${inter.variable} antialiased font-sans`}
       >
-        <Header />
-        {children}
-        <Chatbot />
+        <ThemeProvider>
+          <Header />
+          {children}
+          <Chatbot />
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
