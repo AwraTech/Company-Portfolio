@@ -3,12 +3,15 @@
 import { motion } from "framer-motion";
 import { projects } from "@/data/projects";
 import ProjectCard from "./ProjectCard";
+import { useTheme } from '@/context/ThemeContext';
 
 export default function Projects() {
+	const { isDark } = useTheme();
+	
 	return (
-		<section className="py-16 px-4 section-primary">
+		<section id="projects" className={`py-16 px-4 ${isDark ? 'bg-[#0f172a]' : 'bg-[#30504F]'}`}>
 			<div className="max-w-7xl mx-auto">
-				<p className="text-primary text-sm font-medium mb-2 text-center">
+				<p className="text-[#00FFAB] text-sm font-medium mb-2 text-center">
 					03. PROJECTS
 				</p>
 				<motion.h2
@@ -16,7 +19,7 @@ export default function Projects() {
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true, margin: "-100px" }}
 					transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1] }}
-					className="text-4xl font-bold text-center mb-4 text-foreground"
+					className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-white"
 				>
 					Our Projects
 				</motion.h2>
@@ -29,7 +32,7 @@ export default function Projects() {
 						delay: 0.15,
 						ease: [0.25, 0.4, 0.25, 1],
 					}}
-					className="text-secondary text-center mb-12 max-w-2xl mx-auto"
+					className="text-white/80 text-center mb-12 max-w-2xl mx-auto text-sm md:text-base"
 				>
 					Explore our portfolio of successful projects delivered to
 					clients worldwide
