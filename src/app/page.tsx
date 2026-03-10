@@ -1,3 +1,5 @@
+'use client';
+
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 
@@ -6,6 +8,7 @@ import { FaLinkedin, FaGithub, FaBriefcase } from "react-icons/fa";
 import Services from "@/components/services/Services";
 import Projects from "@/components/projects/Projects";
 import Testimonials from "@/components/testimonials/Testimonials";
+import { useTheme } from '@/context/ThemeContext';
 
 const teamMembers = [
 	{
@@ -59,13 +62,15 @@ const teamMembers = [
 ];
 
 export default function Home() {
+	const { isDark } = useTheme();
+	
 	return (
 		<main className="pt-20 min-h-screen">
 			<HeroSection />
       		<AboutSection />
 			<Services />
 			<Projects />
-			<section id="team" className="py-20 px-6 section-primary">
+			<section id="team" className={`py-20 px-6 ${isDark ? 'bg-[#0f172a]' : 'bg-[#30504F]'}`}>
 				<div className="max-w-7xl mx-auto">
 					<div className="text-center mb-16">
 						<p className="text-[#00FFAB] text-sm font-medium mb-2">
@@ -101,25 +106,27 @@ export default function Home() {
 										href={member.linkedin}
 										target="_blank"
 										rel="noopener noreferrer"
-										className="text-gray-400 hover:text-[#00FFAB] transition-colors"
+										className="text-[#0077B5] hover:text-[#00FFAB] transition-colors"
 									>
-										<FaLinkedin size={20} />
+										<FaLinkedin size={24} />
 									</a>
 									<a
 										href={member.github}
 										target="_blank"
 										rel="noopener noreferrer"
-										className="text-gray-400 hover:text-[#00FFAB] transition-colors"
+										className="text-white hover:text-[#00FFAB] transition-colors"
 									>
-										<FaGithub size={20} />
+										<FaGithub size={24} />
 									</a>
 									<a
 										href={member.portfolio}
 										target="_blank"
 										rel="noopener noreferrer"
-										className="text-gray-400 hover:text-[#00FFAB] transition-colors"
+										className="text-white hover:text-[#00FFAB] transition-colors"
 									>
-										<FaBriefcase size={20} />
+										<svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+											<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+										</svg>
 									</a>
 								</div>
 							</div>
