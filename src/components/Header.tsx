@@ -10,7 +10,7 @@ export default function Header() {
   const { isDark, toggle } = useTheme();
 
   return (
-    <header className="fixed top-0 w-full z-50 backdrop-blur-md border-b border-white/10 bg-background/80">
+    <header className={`fixed top-0 w-full z-50 backdrop-blur-md border-b border-white/10 ${isDark ? 'bg-[#0f172a]/80' : 'bg-[#30504F]/80'}`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0">
@@ -20,9 +20,9 @@ export default function Header() {
           </div>
 
           <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
-            <a href="/" className="text-white hover:text-[#00FFAB] transition">Home</a>
-            <a href="#about" className="text-white hover:text-[#00FFAB] transition">About</a>
-            <a href="#services" className="text-white hover:text-[#00FFAB] transition">Services</a>
+            <a href="/#home" className="text-white hover:text-[#00FFAB] transition">Home</a>
+            <a href="/#about" className="text-white hover:text-[#00FFAB] transition">About</a>
+            <a href="/#services" className="text-white hover:text-[#00FFAB] transition">Services</a>
             <a href="/#team" className="text-white hover:text-[#00FFAB] transition">Meet Team</a>
           </div>
 
@@ -49,9 +49,9 @@ export default function Header() {
 
         {isMenuOpen && (
           <div className="md:hidden pb-4 animate-slideDown border-t border-white/10 mt-2 pt-4">
-            <a href="/" className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Home</a>
-            <a href="#about" className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">About</a>
-            <a href="#services" className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Services</a>
+            <a href="/#home" className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Home</a>
+            <a href="/#about" className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">About</a>
+            <a href="/#services" className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Services</a>
             <a href="/#team" className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Meet Team</a>
             <a href="/news" className="block py-3 px-4 text-[#00FFAB] font-bold text-lg hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2 hover:scale-105">News / Blog</a>
           </div>
