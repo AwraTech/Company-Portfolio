@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { FaCalendar, FaUser, FaArrowRight } from 'react-icons/fa';
+import { useTheme } from '@/context/ThemeContext';
 
 interface NewsPost {
   id: number;
@@ -15,6 +16,7 @@ interface NewsPost {
 }
 
 export default function NewsPage() {
+  const { isDark } = useTheme();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const featuredPosts: NewsPost[] = [
@@ -102,7 +104,7 @@ export default function NewsPage() {
   ];
 
   return (
-    <div className="min-h-screen pt-20 pb-16">
+    <div className={`min-h-screen pt-20 pb-16 ${isDark ? 'bg-[#0f172a]' : 'bg-[#30504F]'}`}>
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">News & Updates</h1>

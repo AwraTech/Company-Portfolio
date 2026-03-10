@@ -28,7 +28,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen pt-20 pb-20">
+    <div className={`min-h-screen pt-20 pb-20 ${isDark ? 'bg-[#0f172a]' : 'bg-[#30504F]'}`}>
       {/* Success Alert */}
       {showSuccess && (
         <div className="fixed top-24 right-4 z-50 bg-[#00FFAB] text-black px-6 py-4 rounded-lg shadow-2xl animate-slideDown flex items-center gap-3">
