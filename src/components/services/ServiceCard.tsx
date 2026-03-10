@@ -21,11 +21,13 @@ export default function ServiceCard({ icon: Icon, title, description, index }: S
         delay: index * 0.15,
         ease: [0.25, 0.4, 0.25, 1]
       }}
-      className="p-6 bg-card-bg dark:bg-card-bg rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all"
+      className="p-6 bg-white/5 border border-white/10 rounded-lg hover:border-[#00FFAB]/50 hover:bg-white/10 transition-all group"
     >
-      <Icon className="w-12 h-12 text-primary mb-4" />
-      <h3 className="text-xl font-semibold mb-2 text-foreground">{title}</h3>
-      <p className="text-secondary">{description}</p>
+      <div className="w-12 h-12 bg-[#00FFAB]/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#00FFAB]/20 transition-all">
+        <Icon className="w-6 h-6 text-[#00FFAB]" />
+      </div>
+      <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
+      <p className="text-white/70 text-sm">{description}</p>
     </motion.div>
   );
 }

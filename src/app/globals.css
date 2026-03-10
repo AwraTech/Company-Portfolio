@@ -13,38 +13,35 @@
 	--font-inter: "Inter", system-ui, -apple-system, sans-serif;
 }
 
-@theme inline {
-	--color-background: var(--background);
-	--color-foreground: var(--foreground);
-	--color-primary: var(--primary);
-	--color-primary-hover: var(--primary-hover);
-	--color-secondary: var(--secondary);
-	--color-card-bg: var(--card-bg);
-	--color-section-bg: var(--section-bg);
-	--color-border-color: var(--border-color);
-	--font-sans: "Inter", sans-serif;
-	--font-mono: var(--font-geist-mono);
+.dark {
+	--background: #0f172a;
+	--foreground: #ffffff;
+	--primary: #00ffab;
+	--primary-hover: #00e69a;
+	--secondary: #8892b0;
+	--card-bg: #1e293b;
+	--section-bg: #0f172a;
+	--border-color: #1e293b;
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--background: #0a192f;
-		--foreground: #ffffff;
-		--primary: #64ffda;
-		--primary-hover: #52e6c8;
-		--secondary: #8892b0;
-		--card-bg: #112240;
-		--section-bg: #0a192f;
-		--border-color: #112240;
-	}
+html {
+	background: #30504f !important;
 }
 
-html, body {
-	background: var(--background);
-	color: var(--foreground);
+html.dark {
+	background: #0f172a !important;
+}
+
+body {
 	font-family: var(--font-inter);
 	transition: background-color 0.3s ease;
+	background: #30504f !important;
+	color: var(--foreground);
 	min-height: 100vh;
+}
+
+body.dark {
+	background: #0f172a !important;
 }
 
 * {

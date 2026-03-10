@@ -17,7 +17,7 @@ const SectionHeading = ({ label, title, description, align = "center" }: Section
       className={`mb-12 md:mb-16 ${align === "center" ? "text-center" : "text-left"}`}
     >
       {label && (
-        <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-primary/10 text-primary mb-4">
+        <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-[#00FFAB]/10 text-[#00FFAB] mb-4">
           {label}
         </span>
       )}

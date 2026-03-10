@@ -24,9 +24,9 @@ export default function ProjectCard({ image, title, description, techStack, live
         delay: index * 0.15,
         ease: [0.25, 0.4, 0.25, 1]
       }}
-      className="bg-card-bg dark:bg-card-bg rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow group"
+      className="bg-white/5 border border-white/10 rounded-lg overflow-hidden hover:border-[#00FFAB]/50 hover:bg-white/10 transition-all group"
     >
-      <div className="relative h-48 bg-secondary/20 overflow-hidden">
+      <div className="relative h-48 overflow-hidden">
         <Image
           src={image}
           alt={title}
@@ -35,11 +35,11 @@ export default function ProjectCard({ image, title, description, techStack, live
         />
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2 text-foreground">{title}</h3>
-        <p className="text-secondary mb-4">{description}</p>
+        <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
+        <p className="text-white/70 text-sm mb-4">{description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
           {techStack.map((tech, index) => (
-            <span key={index} className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">
+            <span key={index} className="px-3 py-1 bg-[#00FFAB]/10 text-[#00FFAB] text-xs rounded-full">
               {tech}
             </span>
           ))}
@@ -48,7 +48,7 @@ export default function ProjectCard({ image, title, description, techStack, live
           href={liveLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-primary hover:text-primary-hover font-medium transition-colors"
+          className="inline-flex items-center gap-2 text-[#00FFAB] hover:text-[#00e69a] font-medium transition-colors text-sm"
         >
           View Project <ExternalLink className="w-4 h-4" />
         </a>
