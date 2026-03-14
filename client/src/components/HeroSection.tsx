@@ -17,7 +17,7 @@ const HeroSection = () => {
         <div className="max-w-2xl">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-8 h-px bg-[#00FFAB]" />
-            <span className="section-label">SINCE 2018</span>
+            <span className="section-label">SINCE 2023</span>
           </div>
           <h1 className="text-white text-3xl md:text-5xl lg:text-6xl mb-6 font-bold">
             Engineering the{" "}

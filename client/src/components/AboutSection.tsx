@@ -7,38 +7,40 @@ import { useTheme } from '@/context/ThemeContext';
 
 const timeline = [
   {
-    year: "2022",
-    title: "Founded",
-    desc: "AwraTech was born from a passion for building exceptional web experiences.",
-  },
-  {
     year: "2023",
-    title: "First Major Project",
-    desc: "Delivered a full-stack SaaS platform serving thousands of users.",
+    title: "Where It All Started",
+    desc: "Awra Tech was founded with a clear mission — build real, high-quality software that solves real problems. Our first project, Ghion Homes, went live as a professional real estate platform for a sales consultant in Addis Ababa.",
   },
   {
     year: "2024",
-    title: "Team Growth",
-    desc: "Expanded to a team of skilled developers, designers, and strategists.",
+    title: "Expanding Our Reach",
+    desc: "We took on more complex challenges — delivering BiruhKids, a full-stack pediatric healthcare platform with AI integration, bilingual support, and role-based access. Our team grew and our stack got stronger.",
   },
   {
     year: "2025",
-    title: "Going Global",
-    desc: "Partnering with clients worldwide to build the future of the web.",
+    title: "Building at Scale",
+    desc: "We shipped Bluelight Academy SMS, an internal school management system handling students, employees, and payments for a real institution in Addis Ababa. We refined our engineering process and deepened our expertise across web, mobile, and backend systems.",
+  },
+  {
+    year: "2026",
+    title: "Going Further",
+    desc: "We are growing our team, taking on bigger projects, and partnering with clients across industries. The goal is simple — keep building software that works, scales, and makes a difference.",
   },
 ];
 
 const stats = [
-  { num: "50+", label: "Projects Delivered" },
-  { num: "30+", label: "Happy Clients" },
+  { num: "4+", label: "Projects Delivered" },
+  { num: "5+", label: "Happy Clients" },
   { num: "3+", label: "Years Experience" },
   { num: "99%", label: "Client Satisfaction" },
 ];
 
 const reasons = [
-  "High-quality engineering",
+  "Web & mobile app development",
+  "Clean, maintainable codebase",
   "Modern scalable tech stack",
-  "Client-focused workflow",
+  "Client-focused agile workflow",
+  "End-to-end product delivery",
   "Transparent communication",
 ];
 
@@ -62,7 +64,7 @@ const AboutSection = () => {
             We build technology<br />for the future.
           </h2>
           <p className="text-white/80 text-sm md:text-base lg:text-lg max-w-3xl mx-auto mb-12 leading-relaxed px-4">
-            Awra Tech is a collaborative hub of engineers, designers, and strategists dedicated to pushing the boundaries of what's possible in the digital landscape.
+            Awra Tech is a team of engineers, designers, and strategists who love building great software. We work closely with our clients to understand their goals and turn them into fast, reliable, and scalable digital products. Every line of code we write is clean, every interface we design is intuitive, and every solution we deliver is built to last. Whether you are launching your first product or scaling an existing platform, we bring the technical depth and creative thinking to make it happen right.
           </p>
           
           <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
@@ -73,7 +75,7 @@ const AboutSection = () => {
                 </svg>
               </div>
               <h3 className="text-[#00FFAB] text-lg font-semibold mb-2">Our Mission</h3>
-              <p className="text-white/70 text-sm">To democratize high-end tech solutions for businesses of all sizes through iterative innovation.</p>
+              <p className="text-white/70 text-sm">To deliver clean, scalable, and high-performing software that solves real problems — making world-class engineering accessible to businesses of every size.</p>
             </div>
             <div className="bg-white/5 border border-white/10 rounded-lg p-5 text-center">
               <div className="w-10 h-10 bg-[#00FFAB]/10 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -83,7 +85,7 @@ const AboutSection = () => {
                 </svg>
               </div>
               <h3 className="text-[#00FFAB] text-lg font-semibold mb-2">Our Vision</h3>
-              <p className="text-white/70 text-sm">Becoming the global benchmark for reliability and creativity in enterprise software development.</p>
+              <p className="text-white/70 text-sm">To be the team that builders trust — known for shipping products that are fast, reliable, and built to grow with the people who use them.</p>
             </div>
           </div>
         </div>
@@ -94,7 +96,7 @@ const AboutSection = () => {
             <SectionHeading
               label="Why Awra"
               title="Built Different, By Design"
-              description="We don't just build products — we craft experiences that leave lasting impressions."
+              description="We don't just write code — we engineer web apps, mobile apps, and full-stack platforms that are fast, scalable, and built for real users. Every project starts with understanding your business, and ends with a product you're proud to ship."
               align="left"
             />
 

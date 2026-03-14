@@ -82,7 +82,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-white font-medium mb-1">Phone</h3>
-                  <a href="tel:+15551234567" className="text-white/70 hover:text-[#00FFAB] transition font-light">+1 (555) 123-4567</a>
+                  <a href="tel:+251978210810" className="block text-white/70 hover:text-[#00FFAB] transition font-light">+251 978 210 810</a>
+                  <a href="tel:+251967606906" className="block text-white/70 hover:text-[#00FFAB] transition font-light">+251 967 606 906</a>
                 </div>
               </div>
 
@@ -102,7 +103,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-white font-medium mb-1">Telegram</h3>
-                  <a href="https://t.me/awratech" className="text-white/70 hover:text-[#00FFAB] transition font-light">@awratech</a>
+                  <a href="https://t.me/+251978210810" className="block text-white/70 hover:text-[#00FFAB] transition font-light">+251 978 210 810</a>
+                  <a href="https://t.me/+251967606906" className="block text-white/70 hover:text-[#00FFAB] transition font-light">+251 967 606 906</a>
                 </div>
               </div>
 
@@ -112,7 +114,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-white font-medium mb-1">WhatsApp</h3>
-                  <a href="https://wa.me/15551234567" className="text-white/70 hover:text-[#00FFAB] transition font-light">+1 (555) 123-4567</a>
+                  <a href="https://wa.me/251978210810" className="block text-white/70 hover:text-[#00FFAB] transition font-light">+251 978 210 810</a>
+                  <a href="https://wa.me/251967606906" className="block text-white/70 hover:text-[#00FFAB] transition font-light">+251 967 606 906</a>
                 </div>
               </div>
             </div>

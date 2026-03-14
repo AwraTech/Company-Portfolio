@@ -3,37 +3,37 @@ import { FaLinkedin, FaGithub, FaBriefcase } from 'react-icons/fa';
 
 const teamMembers = [
   {
-    name: 'John Doe',
-    role: 'CEO & Founder',
+    name: 'Elyas Yenealem',
+    role: 'Founder & Full Stack Developer',
     image: '/images/team/member1.jpg',
     linkedin: 'https://linkedin.com',
     github: 'https://github.com',
     portfolio: 'https://portfolio.com'
   },
   {
-    name: 'Jane Smith',
-    role: 'CTO',
+    name: 'Tenbite Daniel',
+    role: 'Mobile App Developer & UI/UX Designer',
     image: '/images/team/member2.jpg',
     linkedin: 'https://linkedin.com',
     github: 'https://github.com',
     portfolio: 'https://portfolio.com'
   },
   {
-    name: 'Mike Johnson',
-    role: 'Lead Developer',
+    name: 'Yonas',
+    role: 'Social Media Manager & Video Editor',
     image: '/images/team/member3.jpg',
     linkedin: 'https://linkedin.com',
     github: 'https://github.com',
     portfolio: 'https://portfolio.com'
   },
   {
-    name: 'Sarah Williams',
-    role: 'UI/UX Designer',
+    name: 'Samuel',
+    role: 'Communications & Marketing Specialist',
     image: '/images/team/member4.jpg',
     linkedin: 'https://linkedin.com',
     github: 'https://github.com',
     portfolio: 'https://portfolio.com'
-  }
+  },
 ];
 
 export default function Team() {

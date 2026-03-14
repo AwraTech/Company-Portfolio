@@ -9,7 +9,7 @@ interface ProjectCardProps {
   title: string;
   description: string;
   techStack: string[];
-  liveLink: string;
+  liveLink?: string;
   index: number;
 }
 
@@ -44,14 +44,16 @@ export default function ProjectCard({ image, title, description, techStack, live
             </span>
           ))}
         </div>
-        <a
-          href={liveLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-[#00FFAB] hover:text-[#00e69a] font-medium transition-colors text-sm"
-        >
-          View Project <ExternalLink className="w-4 h-4" />
-        </a>
+        {liveLink && (
+          <a
+            href={liveLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-[#00FFAB] hover:text-[#00e69a] font-medium transition-colors text-sm"
+          >
+            View Project <ExternalLink className="w-4 h-4" />
+          </a>
+        )}
       </div>
     </motion.div>
   );

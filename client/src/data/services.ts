@@ -1,4 +1,4 @@
-import { Code, Palette, Smartphone, Globe, Database, Zap } from 'lucide-react';
+import { Code, Palette, Smartphone, Globe, Database, Terminal } from 'lucide-react';
 
 export interface Service {
   icon: any;
@@ -33,8 +33,8 @@ export const services: Service[] = [
     description: 'Scalable cloud infrastructure and services to power your business operations efficiently.',
   },
   {
-    icon: Zap,
-    title: 'Performance Optimization',
-    description: 'Speed up your applications and improve user satisfaction with expert optimization techniques.',
+    icon: Terminal,
+    title: 'Software Development',
+    description: 'End-to-end software solutions built with clean architecture, scalable design patterns, and modern engineering practices to solve real business problems.',
   },
 ];

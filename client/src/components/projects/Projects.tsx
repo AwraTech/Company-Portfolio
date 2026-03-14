@@ -21,7 +21,7 @@ export default function Projects() {
 					transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1] }}
 					className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-white"
 				>
-					Our Projects
+					Featured Projects
 				</motion.h2>
 				<motion.p
 					initial={{ opacity: 0, y: 30 }}
@@ -34,8 +34,7 @@ export default function Projects() {
 					}}
 					className="text-white/80 text-center mb-12 max-w-2xl mx-auto text-sm md:text-base"
 				>
-					Explore our portfolio of successful projects delivered to
-					clients worldwide
+					A selection of our best work — web apps, mobile apps, and software solutions built for real clients with real impact.
 				</motion.p>
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 					{projects.map((project, index) => (
