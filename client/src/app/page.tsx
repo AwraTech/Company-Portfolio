@@ -13,7 +13,7 @@ import { useTheme } from '@/context/ThemeContext';
 const teamMembers = [
 	{
 		name: "Elyas Yenealem",
-		role: "Founder & Full Stack Developer",
+		role: "Full Stack Developer",
 		image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop",
 		linkedin: "https://www.linkedin.com/in/elyasyenealem?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
 		github: "https://github.com/dopi95",
@@ -21,7 +21,7 @@ const teamMembers = [
 	},
 	{
 		name: "Tenbite Daniel",
-		role: "Co-Founder & Mobile App Developer",
+		role: "Full Stack Developer",
 		image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=400&fit=crop",
 		linkedin: "https://www.linkedin.com/in/tenbite-daniel?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
 		github: "https://github.com/tenbite-daniel",
