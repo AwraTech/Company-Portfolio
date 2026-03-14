@@ -51,7 +51,7 @@ export default function TestimonialCard({ picture, name, company, text, index = 
         )}
         <div className="min-w-0">
           <p className="font-semibold text-white text-sm leading-tight">{name}</p>
-          <p className="text-[#00FFAB] text-xs leading-tight mt-0.5 truncate">{company}</p>
+          <p className="text-[#00FFAB] text-xs leading-tight mt-0.5">{company}</p>
         </div>
       </div>
     </motion.div>
