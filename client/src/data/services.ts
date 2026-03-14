@@ -24,8 +24,8 @@ export const services: Service[] = [
   },
   {
     icon: Globe,
-    title: 'Digital Marketing',
-    description: 'Strategic campaigns to boost your online presence and drive measurable business growth.',
+    title: 'Digital Marketing & Social Media Management',
+    description: 'Strategic social media campaigns, content creation, and digital marketing to grow your brand presence and drive real engagement.',
   },
   {
     icon: Database,

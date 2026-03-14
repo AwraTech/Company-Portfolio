@@ -21,11 +21,11 @@ const teamMembers = [
 	},
 	{
 		name: "Tenbite Daniel",
-		role: "Mobile App Developer",
+		role: "Co-Founder & Mobile App Developer",
 		image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=400&fit=crop",
 		linkedin: "https://www.linkedin.com/in/tenbite-daniel?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
 		github: "https://github.com/tenbite-daniel",
-		portfolio: "https://portfolio.com",
+		portfolio: "https://tenbitedaniel.vercel.app/",
 	},
 	{
 		name: "Dagim Sisay",
