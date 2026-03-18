@@ -42,7 +42,7 @@ const teamMembers = [
 		name: "Bereket Eshete",
 		title: "Co-Founder",
 		role: "Backend & AI Developer",
-		image: "",
+		image: "/images/beki.png",
 		linkedin: "https://www.linkedin.com/in/bereket-eshete-7171a0323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
 		github: "https://github.com/Bereket-Eshete",
 		portfolio: "https://portfolio.com",
