@@ -50,7 +50,7 @@ const teamMembers = [
 	{
 		name: "Samuel Eliyas",
 		title: "Co-Founder",
-		role: "Communications & Marketing",
+		role: "Social Media Manager & Marketing Specialist",
 		image: "/images/sami.png",
 		linkedin: "https://www.linkedin.com/in/samuel-eliyas-030762323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
 		github: "https://github.com/Samieliyas",
