@@ -13,15 +13,15 @@ import { useTheme } from '@/context/ThemeContext';
 const teamMembers = [
 	{
 		name: "Elyas Yenealem",
-		role: "Full Stack Developer",
-		image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop",
+		role: "Founder & Full Stack Developer",
+		image: "/images/ela.png",
 		linkedin: "https://www.linkedin.com/in/elyasyenealem?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
 		github: "https://github.com/dopi95",
 		portfolio: "https://elyasyenealem.netlify.app",
 	},
 	{
 		name: "Tenbite Daniel",
-		role: "Full Stack Developer",
+		role: "Co-Founder & Mobile App Developer",
 		image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=400&fit=crop",
 		linkedin: "https://www.linkedin.com/in/tenbite-daniel?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
 		github: "https://github.com/tenbite-daniel",
@@ -30,7 +30,7 @@ const teamMembers = [
 	{
 		name: "Dagim Sisay",
 		role: "Full Stack Developer",
-		image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=400&fit=crop",
+		image: "/images/dagi.png",
 		linkedin: "https://www.linkedin.com/in/dagim-sisay-545a03323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
 		github: "https://github.com/dagimsisay6",
 		portfolio: "https://portfolio.com",
@@ -84,13 +84,14 @@ export default function Home() {
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto px-8 md:px-0">
 						{teamMembers.map((member, index) => (
 							<div key={index} className="group text-center">
-								<div className="relative overflow-hidden mb-4 rounded-lg">
+								<div className="relative mb-4 rounded-2xl overflow-hidden border-2 border-white/10 group-hover:border-[#00FFAB]/50 transition-all duration-300 bg-white/5" style={{aspectRatio: '3/4'}}>
 									<Image
 										src={member.image}
 										alt={member.name}
-										width={280}
-										height={320}
-										className="w-full h-[240px] object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg"
+										fill
+										sizes="(max-width: 768px) 100vw, 280px"
+										quality={100}
+										className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
 									/>
 								</div>
 								<h3 className="text-white text-xl font-light mb-1">{member.name}</h3>
