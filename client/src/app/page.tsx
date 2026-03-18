@@ -21,6 +21,7 @@ const teamMembers = [
 		portfolio: "https://elyasyenealem.netlify.app",
 	},
 	{
+		name: "Tenbite Daniel",
 		title: "Founder",
 		role: "Full Stack Developer",
 		image: "/images/tim.png",
