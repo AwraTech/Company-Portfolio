@@ -60,7 +60,7 @@ const teamMembers = [
 		name: "Yonas Nibret",
 		title: "Co-Founder",
 		role: "UI/UX Designer & Video Editor",
-		image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=400&fit=crop",
+		image: "/images/yoni.png",
 		linkedin: "https://linkedin.com",
 		github: "https://github.com/Yonas20022",
 		portfolio: "https://portfolio.com",
