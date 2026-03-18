@@ -5,7 +5,7 @@ const teamMembers = [
   {
     name: 'Elyas Yenealem',
     role: 'Founder & Full Stack Developer',
-    image: '/images/team/member1.jpg',
+    image: '/images/elyas.png',
     linkedin: 'https://linkedin.com',
     github: 'https://github.com',
     portfolio: 'https://portfolio.com'

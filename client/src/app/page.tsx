@@ -15,7 +15,7 @@ const teamMembers = [
 		name: "Elyas Yenealem",
 		title: "Founder",
 		role: "Full Stack Developer",
-		image: "/images/ela.png",
+		image: "/images/elyas.png",
 		linkedin: "https://www.linkedin.com/in/elyasyenealem?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
 		github: "https://github.com/dopi95",
 		portfolio: "https://elyasyenealem.netlify.app",
