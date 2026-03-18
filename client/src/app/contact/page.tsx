@@ -72,7 +72,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-white font-medium text-sm mb-0.5">Email</h3>
-                  <a href="mailto:awratechnologies@gmail.com" className="text-white/70 hover:text-[#00FFAB] transition text-sm">awratechnologies@gmail.com</a>
+                  <a href="mailto:support@awratech.com" className="block text-white/70 hover:text-[#00FFAB] transition text-sm">support@awratech.com</a>
+                  <a href="mailto:info@awratech.com" className="block text-white/70 hover:text-[#00FFAB] transition text-sm">info@awratech.com</a>
                 </div>
               </div>
 
