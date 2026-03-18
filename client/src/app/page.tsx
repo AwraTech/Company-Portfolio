@@ -42,7 +42,7 @@ const teamMembers = [
 		name: "Bereket Eshete",
 		title: "Co-Founder",
 		role: "Backend & AI Developer",
-		image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=400&fit=crop",
+		image: "",
 		linkedin: "https://www.linkedin.com/in/bereket-eshete-7171a0323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
 		github: "https://github.com/Bereket-Eshete",
 		portfolio: "https://portfolio.com",
@@ -91,14 +91,20 @@ export default function Home() {
 							<div key={index} className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-[#00FFAB]/40 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,255,171,0.07)]">
 								{/* Image */}
 								<div className="relative w-full overflow-hidden bg-black/20" style={{ aspectRatio: '3/4' }}>
-									<Image
-										src={member.image}
-										alt={member.name}
-										fill
-										sizes="(max-width: 768px) 100vw, 400px"
-										quality={100}
-										className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-									/>
+									{member.image ? (
+										<Image
+											src={member.image}
+											alt={member.name}
+											fill
+											sizes="(max-width: 768px) 100vw, 400px"
+											quality={100}
+											className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+										/>
+									) : (
+										<div className="w-full h-full flex items-center justify-center bg-white/5">
+											<span className="text-white/40 text-sm text-center px-4">{member.name}</span>
+										</div>
+									)}
 									{/* Gradient overlay */}
 									<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 								</div>
