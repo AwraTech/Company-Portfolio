@@ -13,7 +13,7 @@ import { useTheme } from '@/context/ThemeContext';
 const teamMembers = [
 	{
 		name: "Elyas Yenealem",
-		title: "Founder",
+		title: "Co-Founder",
 		role: "Full Stack Developer",
 		image: "/images/elyas.png",
 		linkedin: "https://www.linkedin.com/in/elyasyenealem?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -22,7 +22,7 @@ const teamMembers = [
 	},
 	{
 		name: "Tenbite Daniel",
-		title: "Founder",
+		title: "Co-Founder",
 		role: "Full Stack Developer",
 		image: "/images/tim.png",
 		linkedin: "https://www.linkedin.com/in/tenbite-daniel?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",

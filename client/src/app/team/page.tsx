@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithub, FaBriefcase } from 'react-icons/fa';
 const teamMembers = [
   {
     name: 'Elyas Yenealem',
-    role: 'Founder & Full Stack Developer',
+    role: 'Co-Founder & Full Stack Developer',
     image: '/images/elyas.png',
     linkedin: 'https://linkedin.com',
     github: 'https://github.com',
@@ -12,7 +12,7 @@ const teamMembers = [
   },
   {
     name: 'Tenbite Daniel',
-    role: 'Mobile App Developer & UI/UX Designer',
+    role: 'Co-Founder & Mobile App Developer & UI/UX Designer',
     image: '/images/team/member2.jpg',
     linkedin: 'https://linkedin.com',
     github: 'https://github.com',
