@@ -1,5 +1,18 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import { FaLinkedin, FaGithub, FaBriefcase } from 'react-icons/fa';
+
+export const metadata: Metadata = {
+  title: "Our Team | Awra Tech",
+  description: "Meet the expert team behind Awra Tech — Ethiopia's top software company. አውራ ቴክን የሚመሩት የቡድናችን አባላት።",
+  alternates: { canonical: "https://awratech.com/team" },
+  openGraph: {
+    title: "Our Team | Awra Tech",
+    description: "Meet the expert minds behind Awra Tech — Ethiopia's leading software company.",
+    url: "https://awratech.com/team",
+    images: [{ url: "/images/awra-icon.png", alt: "Awra Tech Team" }],
+  },
+};
 
 const teamMembers = [
   {
