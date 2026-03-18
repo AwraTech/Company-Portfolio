@@ -44,6 +44,7 @@ export default function Footer() {
                 <svg className="w-4 h-4 text-[#00FFAB] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                 <div>
                   <span className="text-white/50 text-xs block mb-1">Email:</span>
+                  <a href="mailto:contact@awratech.com" className="block hover:text-[#00FFAB] transition">contact@awratech.com</a>
                   <a href="mailto:support@awratech.com" className="block hover:text-[#00FFAB] transition">support@awratech.com</a>
                   <a href="mailto:info@awratech.com" className="block hover:text-[#00FFAB] transition">info@awratech.com</a>
                 </div>
