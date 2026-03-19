@@ -50,12 +50,12 @@ export default function Header() {
 
         {isMenuOpen && (
           <div className="md:hidden pb-4 animate-slideDown border-t border-white/10 mt-2 pt-4">
-            <a href="/#home" className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Home</a>
-            <a href="/#about" className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">About</a>
-            <a href="/#services" className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Services</a>
-            <a href="/#team" className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Meet Team</a>
-            <a href="/contact" className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Contact</a>
-            <a href="/news" className="block py-3 px-4 text-[#00FFAB] font-bold text-lg hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2 hover:scale-105">News / Blog</a>
+            <a href="/#home" onClick={() => setIsMenuOpen(false)} className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Home</a>
+            <a href="/#about" onClick={() => setIsMenuOpen(false)} className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">About</a>
+            <a href="/#services" onClick={() => setIsMenuOpen(false)} className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Services</a>
+            <a href="/#team" onClick={() => setIsMenuOpen(false)} className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Meet Team</a>
+            <a href="/contact" onClick={() => setIsMenuOpen(false)} className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Contact</a>
+            <a href="/news" onClick={() => setIsMenuOpen(false)} className="block py-3 px-4 text-[#00FFAB] font-bold text-lg hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2 hover:scale-105">News / Blog</a>
           </div>
         )}
       </nav>
