@@ -61,7 +61,7 @@ export const metadata: Metadata = {
       "Awra Tech — Ethiopia's premier software company. Web development, mobile apps, UI/UX & digital marketing. አዋራ ቴክ - የኢትዮጵያ ቁንጮ የቴክኖሎጂ ኩባንያ።",
     images: [
       {
-        url: "/images/awra-icon.png",
+        url: "/favicon.png",
         width: 1200,
         height: 630,
         alt: "Awra Tech - Ethiopian Software Company",
@@ -74,16 +74,15 @@ export const metadata: Metadata = {
     title: "Awra Tech | Web, Mobile & Software Development in Ethiopia",
     description:
       "Awra Tech — Ethiopia's premier software company. Web development, mobile apps, UI/UX & digital marketing.",
-    images: ["/images/awra-icon.png"],
+    images: ["/favicon.png"],
     creator: "@awratech",
   },
   icons: {
     icon: [
-      { url: "/favicon.png", type: "image/png" },
-      { url: "/images/awra-icon.png", type: "image/png" },
+      { url: "/favicon.png", type: "image/png", sizes: "any" },
     ],
     shortcut: "/favicon.png",
-    apple: "/images/awra-icon.png",
+    apple: "/favicon.png",
   },
   verification: {
     google: "qNJipvdFbqWGYGqC1XbGOlumSeIVZNMV2qhd3WuU8ik",
@@ -107,8 +106,8 @@ export default function RootLayout({
               "name": "Awra Tech",
               "alternateName": ["አዋራ ቴክ", "AwraTech"],
               "url": "https://awratech.com",
-              "logo": "https://awratech.com/images/awra-icon.png",
-              "image": "https://awratech.com/images/awra-icon.png",
+              "logo": "https://awratech.com/favicon.png",
+              "image": "https://awratech.com/favicon.png",
               "description": "Awra Tech is Ethiopia's leading software company specializing in web development, mobile apps, UI/UX design, and digital marketing.",
               "foundingDate": "2024",
               "address": {

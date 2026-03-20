@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Our Team | Awra Tech",
     description: "Meet the expert minds behind Awra Tech — Ethiopia's leading software company.",
     url: "https://awratech.com/team",
-    images: [{ url: "/images/awra-icon.png", alt: "Awra Tech Team" }],
+    images: [{ url: "/favicon.png", alt: "Awra Tech Team" }],
   },
 };
 

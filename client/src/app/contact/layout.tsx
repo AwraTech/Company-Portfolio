@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: "Contact Us | Awra Tech",
     description: "Reach out to Awra Tech for web, mobile & software development services in Ethiopia.",
     url: "https://awratech.com/contact",
-    images: [{ url: "/images/awra-icon.png", alt: "Awra Tech Contact" }],
+    images: [{ url: "/favicon.png", alt: "Awra Tech Contact" }],
   },
 };
 
