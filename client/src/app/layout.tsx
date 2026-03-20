@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     apple: "/images/awra-icon.png",
   },
   verification: {
-    google: "google-site-verification",
+    google: "qNJipvdFbqWGYGqC1XbGOlumSeIVZNMV2qhd3WuU8ik",
   },
 };
 
