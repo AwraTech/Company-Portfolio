@@ -36,7 +36,7 @@ export default function Projects() {
 				>
 					A selection of our best work — web apps, mobile apps, and software solutions built for real clients with real impact.
 				</motion.p>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
 					{projects.map((project, index) => (
 						<ProjectCard
 							key={index}
@@ -45,6 +45,8 @@ export default function Projects() {
 							description={project.description}
 							techStack={project.techStack}
 							liveLink={project.liveLink}
+							qrImage={project.qrImage}
+							menuLink={project.menuLink}
 							index={index}
 						/>
 					))}
