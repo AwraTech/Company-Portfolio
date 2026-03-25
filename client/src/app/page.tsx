@@ -36,7 +36,7 @@ const teamMembers = [
 		image: "/images/dagi.png",
 		linkedin: "https://www.linkedin.com/in/dagim-sisay-545a03323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
 		github: "https://github.com/dagimsisay6",
-		portfolio: "https://portfolio.com",
+		portfolio: "https://dagimsisayportfolio.netlify.app",
 	},
 	{
 		name: "Bereket Eshete",
