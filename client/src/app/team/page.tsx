@@ -21,7 +21,7 @@ const teamMembers = [
     image: '/images/elyas.png',
     linkedin: 'https://linkedin.com',
     github: 'https://github.com',
-    portfolio: 'https://portfolio.com'
+    portfolio: 'https://elyas.awratech.com'
   },
   {
     name: 'Tenbite Daniel',
