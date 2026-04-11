@@ -19,13 +19,6 @@ export const projects: Project[] = [
     menuLink: 'https://the-urb.vercel.app/menu',
   },
   {
-    image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=300&h=400&fit=crop',
-    title: 'Darik Coffee — Digital Menu',
-    description: 'A modern QR-powered digital menu experience for Darik Coffee. Customers scan a QR code at their table to instantly browse the full menu with rich visuals, item descriptions, and pricing — no app download required. Built for speed, mobile-first design, and seamless in-cafe UX.',
-    techStack: ['Next.js', 'React', 'TypeScript', 'TailwindCSS'],
-    liveLink: 'https://darikcoffee.com/menu-at/',
-  },
-  {
     image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=300&h=400&fit=crop',
     title: 'BiruhKids Pediatric Specialty Clinic',
     description: 'A comprehensive digital healthcare platform for pediatric care with multi-role authentication, online appointment booking, AI-powered chatbot, bilingual support, and a full admin dashboard.',
