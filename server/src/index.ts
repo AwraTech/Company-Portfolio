@@ -8,7 +8,8 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:3500' }));
+const allowedOrigins = (process.env.CLIENT_URL || 'http://localhost:3500').split(',').map(o => o.replace(/\/+$/, ''));
+app.use(cors({ origin: (origin, cb) => cb(null, !origin || allowedOrigins.includes((origin || '').replace(/\/+$/, ''))) }));
 app.use(express.json());
 
 app.use('/api/chat', chatRouter);
