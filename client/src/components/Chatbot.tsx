@@ -28,12 +28,44 @@ export default function Chatbot() {
   if (pathname === '/contact' || pathname === '/news') return null;
 
   const renderContent = (text: string) => {
-    const parts = text.split(/(https?:\/\/[^\s]+)/g);
-    return parts.map((part, i) =>
-      /^https?:\/\//.test(part) ? (
-        <a key={i} href={part} target="_blank" rel="noopener noreferrer" className="underline text-[#00FFAB] break-all hover:opacity-80">{part}</a>
-      ) : part
-    );
+    const lines = text.split('\n');
+    const elements: React.ReactNode[] = [];
+    let i = 0;
+
+    const parseInline = (line: string): React.ReactNode[] => {
+      const parts = line.split(/(\*\*[^*]+\*\*|https?:\/\/[^\s]+)/g);
+      return parts.map((part, j) => {
+        if (/^\*\*[^*]+\*\*$/.test(part)) return <strong key={j}>{part.slice(2, -2)}</strong>;
+        if (/^https?:\/\//.test(part)) { const url = part.replace(/[.,!?;:]+$/, ''); const trail = part.slice(url.length); return <>{<a key={j} href={url} target="_blank" rel="noopener noreferrer" className="underline text-[#00FFAB] break-all hover:opacity-80">{url}</a>}{trail}</>; }
+        return part;
+      });
+    };
+
+    while (i < lines.length) {
+      const line = lines[i];
+      if (/^[-*]\s/.test(line)) {
+        const items: string[] = [];
+        while (i < lines.length && /^[-*]\s/.test(lines[i])) {
+          items.push(lines[i].replace(/^[-*]\s/, ''));
+          i++;
+        }
+        elements.push(<ul key={i} className="list-disc pl-4 space-y-1 my-1">{items.map((it, j) => <li key={j}>{parseInline(it)}</li>)}</ul>);
+      } else if (/^\d+\.\s/.test(line)) {
+        const items: string[] = [];
+        while (i < lines.length && /^\d+\.\s/.test(lines[i])) {
+          items.push(lines[i].replace(/^\d+\.\s/, ''));
+          i++;
+        }
+        elements.push(<ol key={i} className="list-decimal pl-4 space-y-1 my-1">{items.map((it, j) => <li key={j}>{parseInline(it)}</li>)}</ol>);
+      } else if (line.trim() === '') {
+        elements.push(<br key={i} />);
+        i++;
+      } else {
+        elements.push(<p key={i} className="my-0.5">{parseInline(line)}</p>);
+        i++;
+      }
+    }
+    return elements;
   };
 
   const sendMessage = async () => {
@@ -135,7 +167,7 @@ export default function Chatbot() {
                     </svg>
                   </div>
                 )}
-                <div className={`max-w-[78%] px-3.5 py-2.5 text-sm leading-relaxed rounded-2xl ${
+                <div className={`max-w-[78%] px-3.5 py-2.5 text-sm leading-relaxed rounded-2xl space-y-0.5 ${
                   msg.role === 'user'
                     ? 'bg-[#00FFAB] text-[#0f172a] font-medium rounded-br-none'
                     : 'bg-white/10 text-white rounded-bl-none'
