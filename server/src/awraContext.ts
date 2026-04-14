@@ -63,11 +63,13 @@ Location: Addis Ababa, Ethiopia
 
 ## Our Team (Co-Founders)
 
-1. **Elyas Yenealem** — Co-Founder, Full Stack Developer | Portfolio: https://elyas.awratech.com
+All six co-founders studied Computer Science at Unity University, Addis Ababa, and graduated in 2026.
+
+1. **Elyas Yenealem** — Co-Founder, Full Stack Developer | BSc Computer Science, Unity University (2026) & BA in Business Administration and Information Systems (BAIS), Addis Ababa University School of Commerce | Portfolio: https://elyas.awratech.com
 2. **Tenbite Daniel** — Co-Founder, Full Stack Developer | Portfolio: https://tenbitedaniel.vercel.app/
 3. **Dagim Sisay** — Co-Founder, Full Stack Developer | Portfolio: https://dagimsisayportfolio.netlify.app
 4. **Bereket Eshete** — Co-Founder, Backend & AI Developer
-5. **Samuel Eliyas** — Co-Founder, Social Media Manager & Marketing Specialist
+5. **Samuel Eliyas** — Co-Founder, Social Media Manager & Marketing Specialist, Certified Personal Trainer & Fitness Trainer at Sweatbox APG Bole Branch
 6. **Yonas Nibret** — Co-Founder, UI/UX Designer & Video Editor
 
 ---
