@@ -27,6 +27,15 @@ export default function Chatbot() {
 
   if (pathname === '/contact' || pathname === '/news') return null;
 
+  const renderContent = (text: string) => {
+    const parts = text.split(/(https?:\/\/[^\s]+)/g);
+    return parts.map((part, i) =>
+      /^https?:\/\//.test(part) ? (
+        <a key={i} href={part} target="_blank" rel="noopener noreferrer" className="underline text-[#00FFAB] break-all hover:opacity-80">{part}</a>
+      ) : part
+    );
+  };
+
   const sendMessage = async () => {
     const text = input.trim();
     if (!text || loading) return;
@@ -131,7 +140,7 @@ export default function Chatbot() {
                     ? 'bg-[#00FFAB] text-[#0f172a] font-medium rounded-br-none'
                     : 'bg-white/10 text-white rounded-bl-none'
                 }`}>
-                  {msg.content}
+                  {renderContent(msg.content)}
                 </div>
               </div>
             ))}
