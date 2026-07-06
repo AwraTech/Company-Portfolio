@@ -25,9 +25,9 @@ const teamMembers = [
 		title: "Co-Founder",
 		role: "Full Stack Developer",
 		image: "/images/tim.png",
-		linkedin: "https://www.linkedin.com/in/tenbite-daniel?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+		linkedin: "https://www.linkedin.com/in/tenbite-daniel",
 		github: "https://github.com/tenbite-daniel",
-		portfolio: "https://tenbitedaniel.vercel.app/",
+		portfolio: "https://tenbitedaniel.awratech.com/",
 	},
 	{
 		name: "Dagim Sisay",
@@ -36,7 +36,7 @@ const teamMembers = [
 		image: "/images/dagi.png",
 		linkedin: "https://www.linkedin.com/in/dagim-sisay-545a03323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
 		github: "https://github.com/dagimsisay6",
-		portfolio: "https://dagimsisayportfolio.netlify.app",
+		portfolio: "https://dagimsisay.awratech.com",
 	},
 	{
 		name: "Bereket Eshete",
