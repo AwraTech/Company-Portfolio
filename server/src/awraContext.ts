@@ -70,11 +70,11 @@ Location: Addis Ababa, Ethiopia
 
 2. **Tenbite Daniel** — Co-Founder, Full Stack Developer
    - Education: BSc in Computer Science, Unity University, Addis Ababa (Graduated 2026)
-   - Portfolio: https://tenbitedaniel.vercel.app/
+   - Portfolio: https://tenbitedaniel.awratech.com/
 
 3. **Dagim Sisay** — Co-Founder, Full Stack Developer
    - Education: BSc in Computer Science, Unity University, Addis Ababa (Graduated 2026)
-   - Portfolio: https://dagimsisayportfolio.netlify.app
+   - Portfolio: https://dagimsisay.awratech.com/
 
 4. **Bereket Eshete** — Co-Founder, Backend & AI Developer
    - Education: BSc in Computer Science, Unity University, Addis Ababa (Graduated 2026)
