@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useTheme } from '@/context/ThemeContext';
 
 export default function Footer() {
@@ -95,10 +96,10 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4 text-base">COMPANY</h4>
             <ul className="space-y-2 text-base text-white/70">
-              <li><a href="/#about" className="hover:text-[#00FFAB] transition">About</a></li>
-              <li><a href="/#services" className="hover:text-[#00FFAB] transition">Services</a></li>
-              <li><a href="/#projects" className="hover:text-[#00FFAB] transition">Projects</a></li>
-              <li><a href="/news" className="hover:text-[#00FFAB] transition">News</a></li>
+              <li><Link href="/#about" className="hover:text-[#00FFAB] transition">About</Link></li>
+              <li><Link href="/#services" className="hover:text-[#00FFAB] transition">Services</Link></li>
+              <li><Link href="/projects" className="hover:text-[#00FFAB] transition">Projects</Link></li>
+              <li><Link href="/news" className="hover:text-[#00FFAB] transition">News</Link></li>
             </ul>
           </div>
         </div>

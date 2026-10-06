@@ -108,7 +108,7 @@ export default function Testimonials() {
         <p className="text-[#00FFAB] text-sm font-medium mb-2 text-center">05. TESTIMONIALS</p>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-white">What Our Clients Say</h2>
         <p className="text-white/80 text-center mb-8 max-w-2xl mx-auto text-sm md:text-base">
-          Don't just take our word for it - hear from our satisfied clients
+          Don&apos;t just take our word for it - hear from our satisfied clients
         </p>
         
         <div className="flex justify-center mb-8">

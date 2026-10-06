@@ -33,6 +33,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const saved = localStorage.getItem('theme');
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsDark(saved === 'dark');
   }, []);
 

@@ -1,7 +1,7 @@
-import { Code, Palette, Smartphone, Globe, Database, Terminal } from 'lucide-react';
+import { Code, Palette, Smartphone, Globe, Database, Terminal, type LucideIcon } from 'lucide-react';
 
 export interface Service {
-  icon: any;
+  icon: LucideIcon;
   title: string;
   description: string;
 }

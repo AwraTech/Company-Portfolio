@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { MdLightMode, MdDarkMode } from 'react-icons/md';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useTheme } from '@/context/ThemeContext';
 
 export default function Header() {
@@ -14,25 +15,25 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0">
-            <a href="/">
+            <Link href="/">
               <Image src="/assets/logo.png" alt="Awra Tech" width={120} height={120} className="object-contain cursor-pointer" />
-            </a>
+            </Link>
           </div>
 
           <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
-            <a href="/#home" className="text-white hover:text-[#00FFAB] transition">Home</a>
-            <a href="/#about" className="text-white hover:text-[#00FFAB] transition">About</a>
-            <a href="/#services" className="text-white hover:text-[#00FFAB] transition">Services</a>
-            <a href="/projects" className="text-white hover:text-[#00FFAB] transition">Projects</a>
-            <a href="/#team" className="text-white hover:text-[#00FFAB] transition">Meet Team</a>
-            <a href="/contact" className="text-white hover:text-[#00FFAB] transition">Contact</a>
+            <Link href="/#home" className="text-white hover:text-[#00FFAB] transition">Home</Link>
+            <Link href="/#about" className="text-white hover:text-[#00FFAB] transition">About</Link>
+            <Link href="/#services" className="text-white hover:text-[#00FFAB] transition">Services</Link>
+            <Link href="/projects" className="text-white hover:text-[#00FFAB] transition">Projects</Link>
+            <Link href="/#team" className="text-white hover:text-[#00FFAB] transition">Meet Team</Link>
+            <Link href="/contact" className="text-white hover:text-[#00FFAB] transition">Contact</Link>
           </div>
 
           <div className="hidden md:flex items-center gap-6">
             <button onClick={toggle} className="text-white hover:text-[#00FFAB] transition-all p-2 hover:scale-110 cursor-pointer">
               {isDark ? <MdLightMode size={24} /> : <MdDarkMode size={24} />}
             </button>
-            <a href="/news" className="text-[#00FFAB] font-bold text-lg hover:scale-110 transition-transform duration-300">News / Blog</a>
+            <Link href="/news" className="text-[#00FFAB] font-bold text-lg hover:scale-110 transition-transform duration-300">News / Blog</Link>
           </div>
 
           <div className="md:hidden flex items-center gap-4">
@@ -51,13 +52,13 @@ export default function Header() {
 
         {isMenuOpen && (
           <div className="md:hidden pb-4 animate-slideDown border-t border-white/10 mt-2 pt-4">
-            <a href="/#home" onClick={() => setIsMenuOpen(false)} className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Home</a>
-            <a href="/#about" onClick={() => setIsMenuOpen(false)} className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">About</a>
-            <a href="/#services" onClick={() => setIsMenuOpen(false)} className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Services</a>
-            <a href="/projects" onClick={() => setIsMenuOpen(false)} className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Projects</a>
-            <a href="/#team" onClick={() => setIsMenuOpen(false)} className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Meet Team</a>
-            <a href="/contact" onClick={() => setIsMenuOpen(false)} className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Contact</a>
-            <a href="/news" onClick={() => setIsMenuOpen(false)} className="block py-3 px-4 text-[#00FFAB] font-bold text-lg hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2 hover:scale-105">News / Blog</a>
+            <Link href="/#home" onClick={() => setIsMenuOpen(false)} className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Home</Link>
+            <Link href="/#about" onClick={() => setIsMenuOpen(false)} className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">About</Link>
+            <Link href="/#services" onClick={() => setIsMenuOpen(false)} className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Services</Link>
+            <Link href="/projects" onClick={() => setIsMenuOpen(false)} className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Projects</Link>
+            <Link href="/#team" onClick={() => setIsMenuOpen(false)} className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Meet Team</Link>
+            <Link href="/contact" onClick={() => setIsMenuOpen(false)} className="block py-3 px-4 text-white hover:text-[#00FFAB] hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2">Contact</Link>
+            <Link href="/news" onClick={() => setIsMenuOpen(false)} className="block py-3 px-4 text-[#00FFAB] font-bold text-lg hover:bg-white/5 rounded-lg transition-all transform hover:translate-x-2 hover:scale-105">News / Blog</Link>
           </div>
         )}
       </nav>

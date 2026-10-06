@@ -51,7 +51,7 @@ export default function ContactPage() {
         <div className={`absolute inset-0 bg-gradient-to-b ${isDark ? 'from-black/20 via-[#0f172a]/90 to-[#0f172a]' : 'from-black/20 via-[#30504F]/90 to-[#30504F]'}`}></div>
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-3">Contact Our Team</h1>
-          <p className="text-sm sm:text-base text-white/90 max-w-xl">Get in touch with us and let's discuss how we can help bring your ideas to life.</p>
+          <p className="text-sm sm:text-base text-white/90 max-w-xl">Get in touch with us and let&apos;s discuss how we can help bring your ideas to life.</p>
         </div>
       </div>
 
@@ -61,8 +61,8 @@ export default function ContactPage() {
           {/* Left Side - Info */}
           <div className="space-y-6">
             <div>
-              <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-3">Let's Build The Future Together</h2>
-              <p className="text-white/70 text-sm leading-relaxed">Have a project in mind? We're here to turn your vision into reality.</p>
+              <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-3">Let&apos;s Build The Future Together</h2>
+              <p className="text-white/70 text-sm leading-relaxed">Have a project in mind? We&apos;re here to turn your vision into reality.</p>
             </div>
 
             <div className="space-y-4">

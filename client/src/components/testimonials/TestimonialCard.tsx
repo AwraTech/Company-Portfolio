@@ -24,7 +24,7 @@ export default function TestimonialCard({ picture, name, company, text, index = 
       className="relative bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-4 hover:border-[#00FFAB]/40 hover:bg-white/8 transition-all duration-300 hover:shadow-[0_0_24px_rgba(0,255,171,0.08)] h-full"
     >
       {/* Quote icon */}
-      <div className="text-[#00FFAB]/20 text-6xl font-serif leading-none select-none absolute top-4 right-5">"</div>
+      <div className="text-[#00FFAB]/20 text-6xl font-serif leading-none select-none absolute top-4 right-5">&ldquo;</div>
 
       {/* Stars */}
       <div className="flex gap-0.5">
@@ -36,7 +36,7 @@ export default function TestimonialCard({ picture, name, company, text, index = 
       </div>
 
       {/* Text */}
-      <p className="text-white/75 text-sm leading-relaxed flex-grow">"{text}"</p>
+      <p className="text-white/75 text-sm leading-relaxed flex-grow">&ldquo;{text}&rdquo;</p>
 
       {/* Author */}
       <div className="flex items-center gap-3 pt-2 border-t border-white/10">
