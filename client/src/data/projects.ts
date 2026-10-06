@@ -10,6 +10,13 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    image: '/golden-key.png',
+    title: 'Golden Key Properties & Real Estate CRM',
+    description: 'A luxury real estate ecosystem featuring an architectural property showcase portal, an enterprise brokerage CRM, and an AI-driven WhatsApp lead capture bot. Includes dynamic video tours, interactive floor plans, a deals Kanban pipeline, automated client PDF proposal generation, and real-time lead ingestion.',
+    techStack: ['Next.js', 'React', 'TypeScript', 'Node.js', 'Express.js', 'PostgreSQL', 'Prisma', 'TailwindCSS'],
+    liveLink: 'https://goldenkeypropertys.com',
+  },
+  {
     image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=300&h=400&fit=crop',
     title: 'The URB — Digital Menu & Website',
     description: 'A full-stack restaurant platform for The URB featuring a stunning promotional landing page and a live QR-powered digital menu. Each branch manager or admin can independently control, edit, and update their menu in real time — no developer needed. Customers simply scan the QR code placed on their table to instantly browse the full menu with categories, photos, and pricing. Built end-to-end with Next.js for both frontend and backend.',
@@ -51,12 +58,5 @@ export const projects: Project[] = [
     description: 'A full-stack web application for managing creative portfolios, projects, and client communications. Features an admin panel, user dashboard, portfolio showcase with media gallery, and secure JWT authentication.',
     techStack: ['Next.js', 'React', 'TypeScript', 'Node.js', 'Express.js', 'MongoDB', 'TailwindCSS'],
     liveLink: 'https://kabcreativelab.com',
-  },
-  {
-    image: '/golden-key.png',
-    title: 'Golden Key Properties & Real Estate CRM',
-    description: 'A luxury real estate ecosystem featuring an architectural property showcase portal, an enterprise brokerage CRM, and an AI-driven WhatsApp lead capture bot. Includes dynamic video tours, interactive floor plans, a deals Kanban pipeline, automated client PDF proposal generation, and real-time lead ingestion.',
-    techStack: ['Next.js', 'React', 'TypeScript', 'Node.js', 'Express.js', 'PostgreSQL', 'Prisma', 'TailwindCSS'],
-    liveLink: 'https://goldenkeypropertys.com',
   },
 ];

@@ -25,44 +25,44 @@ Location: Addis Ababa, Ethiopia
 
 ## Our Projects
 
-1. **The URB — Digital Menu & Website**
+1. **Golden Key Properties & Real Estate CRM**
+   Full luxury real estate portal and brokerage CRM with an AI WhatsApp bot for automated lead capture, property management, deals Kanban, and client proposal generation.
+   Tech: Next.js, React, TypeScript, Node.js, Express.js, PostgreSQL, Prisma, TailwindCSS
+   Live: https://goldenkeypropertys.com
+
+2. **The URB — Digital Menu & Website**
    Full-stack restaurant platform with QR-powered digital menu. Branch managers update menus in real time.
    Tech: Next.js, React, TypeScript, TailwindCSS, MongoDB, NextAuth
    Live: https://the-urb.vercel.app/
 
-2. **Darik Coffee — Digital Menu**
+3. **Darik Coffee — Digital Menu**
    QR-powered digital menu for Darik Coffee. Mobile-first, no app download required.
    Tech: Next.js, React, TypeScript, TailwindCSS
    Live: https://darikcoffee.com/menu-at/
 
-3. **BiruhKids Pediatric Specialty Clinic**
+4. **BiruhKids Pediatric Specialty Clinic**
    Digital healthcare platform with multi-role auth, appointment booking, AI chatbot, bilingual support, and admin dashboard.
    Tech: React, Node.js, MongoDB, Express.js, Tailwind CSS, Puter.js
    Live: https://biruhkidsclinic.com
 
-4. **Bluelight Academy SMS (School Management System)**
+5. **Bluelight Academy SMS (School Management System)**
    Full-stack school management system with admin control over students, employees, payments, and role-based access.
    Tech: Next.js, Node.js, Express.js, MongoDB, TypeScript, Brevo
 
-5. **Ghion Homes Real Estate**
+6. **Ghion Homes Real Estate**
    Professional real estate website for displaying properties and facilitating buyer consultations.
    Tech: HTML, CSS, JavaScript, Node.js, Express.js, PostgreSQL
    Live: https://ghionhomessales.com
 
-6. **Nova Studio Ethiopia**
+7. **Nova Studio Ethiopia**
    Multilingual (English/Amharic) creative production agency website with photography, videography, and digital marketing.
    Tech: React, TypeScript, TailwindCSS, i18next, Vite, EmailJS
    Live: https://novastudio.et
 
-7. **Kab Creative Lab**
+8. **Kab Creative Lab**
    Full-stack web app for managing creative portfolios, projects, and client communications with admin panel and JWT auth.
    Tech: Next.js, React, TypeScript, Node.js, Express.js, MongoDB, TailwindCSS
    Live: https://kabcreativelab.com
-
-8. **Golden Key Properties & Real Estate CRM**
-   Full luxury real estate portal and brokerage CRM with an AI WhatsApp bot for automated lead capture, property management, deals Kanban, and client proposal generation.
-   Tech: Next.js, React, TypeScript, Node.js, Express.js, PostgreSQL, Prisma, TailwindCSS
-   Live: https://goldenkeypropertys.com
 
 ---
 
