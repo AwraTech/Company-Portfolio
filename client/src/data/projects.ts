@@ -52,4 +52,11 @@ export const projects: Project[] = [
     techStack: ['Next.js', 'React', 'TypeScript', 'Node.js', 'Express.js', 'MongoDB', 'TailwindCSS'],
     liveLink: 'https://kabcreativelab.com',
   },
+  {
+    image: '/golden-key.png',
+    title: 'Golden Key Properties & Real Estate CRM',
+    description: 'A luxury real estate ecosystem featuring an architectural property showcase portal, an enterprise brokerage CRM, and an AI-driven WhatsApp lead capture bot. Includes dynamic video tours, interactive floor plans, a deals Kanban pipeline, automated client PDF proposal generation, and real-time lead ingestion.',
+    techStack: ['Next.js', 'React', 'TypeScript', 'Node.js', 'Express.js', 'PostgreSQL', 'Prisma', 'TailwindCSS'],
+    liveLink: 'https://goldenkeypropertys.com',
+  },
 ];

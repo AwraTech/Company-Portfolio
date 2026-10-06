@@ -59,6 +59,11 @@ Location: Addis Ababa, Ethiopia
    Tech: Next.js, React, TypeScript, Node.js, Express.js, MongoDB, TailwindCSS
    Live: https://kabcreativelab.com
 
+8. **Golden Key Properties & Real Estate CRM**
+   Full luxury real estate portal and brokerage CRM with an AI WhatsApp bot for automated lead capture, property management, deals Kanban, and client proposal generation.
+   Tech: Next.js, React, TypeScript, Node.js, Express.js, PostgreSQL, Prisma, TailwindCSS
+   Live: https://goldenkeypropertys.com
+
 ---
 
 ## Our Team (Co-Founders)

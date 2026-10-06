@@ -39,7 +39,7 @@ export default function Projects() {
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
 					{projects.map((project, index) => (
 						<ProjectCard
-							key={index}
+							key={project.title}
 							image={project.image}
 							title={project.title}
 							description={project.description}
